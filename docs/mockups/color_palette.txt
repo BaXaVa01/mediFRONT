@@ -1,0 +1,37 @@
+1. Fondo y Superficies: #FDF9F3 (Crema de Avena)
+Uso: Es el lienzo principal. Se aplica en el fondo de toda la aplicación y contenedores grandes.
+
+Cuándo: Siempre que se necesite reducir la fatiga visual y evitar la "frialdad" del blanco puro.
+
+Variación: Para tarjetas (cards) o secciones anidadas, usa blanco puro (#FFFFFF) sobre este fondo para crear una elevación visual sutil.
+
+2. Jerarquía y Lectura: #1C365C (Azul Marino Cálido)
+Uso: Títulos (H1, H2, H3), textos de cuerpo y barras de navegación superior.
+
+Cuándo: Para transmitir autoridad y confianza médica sin ser agresivo.
+
+Variación: Usa una opacidad del 70% para textos secundarios (como leyendas o fechas) para mantener la armonía sin saturar de color oscuro.
+
+3. Interacción Principal: #5A9BD4 (Azul Cielo Suave)
+Uso: Botones de "Call to Action" (CTA), enlaces activos y botones de guardado.
+
+Cuándo: Momentos de decisión del usuario (ej: "Confirmar Cita", "Ver Perfil").
+
+Variación: Oscurece un 10% el tono para el estado hover (cuando el usuario pasa el mouse) para dar feedback de clicabilidad.
+
+4. Validación y Salud: #A3C9A8 (Verde Musgo)
+Uso: Mensajes de éxito, iconos de "disponible", etiquetas de "verificado" y progreso de salud.
+
+Cuándo: Para confirmar que una acción salió bien o que un médico está listo para atender.
+
+Variación: Úsalo con un fondo muy claro (lavado) del mismo tono para "banners" de notificación de éxito.
+
+5. El Toque Humano: #E6CBB8 (Terracota Atenuado)
+Uso: Acentos decorativos, estados de "alerta suave" o recordatorios que no sean críticos.
+
+Cuándo: Para resaltar elementos que necesitan atención pero no urgencia (ej: "Tienes una duda pendiente").
+
+Variación: Úsalo en bordes delgados (1px) o fondos de iconos pequeños para romper la monotonía de los azules.
+
+Regla de Oro 
+Proporción 60-30-10: Aplica el 60% en Crema (#FDF9F3), el 30% en Azul Marino (#1C365C) para textos/detalles, y reserva el 10% restante para los colores de acción (Azul Cielo, Verde y Terracota). Esto garantiza que el sitio se sienta "confortante" y no saturado.

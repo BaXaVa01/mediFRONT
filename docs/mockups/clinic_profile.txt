@@ -1,0 +1,27 @@
+Purpose: Conversion page (sell the clinic)
+
+What it does:
+
+Displays full clinic information
+Builds trust
+Prepares user for booking
+
+Main sections:
+
+Hero gallery (images)
+Verified badge + rating
+Address
+About section
+Specialties
+Medical team
+Pricing
+Location map
+"Book Appointment" button
+
+Flow:
+User enters clinic profile
+→ Reviews information
+→ Checks pricing
+→ Reviews doctors
+→ Clicks "Book Appointment"
+→ (Future: booking flow)

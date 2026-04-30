@@ -1,0 +1,105 @@
+Usuarios y roles
+
+un usuario puede ser paciente, doctor, clínica o admin.
+un doctor puede trabajar asociado a clínicas o como independiente.
+una clínica puede tener varios doctores asociados.
+un paciente solo gestiona sus propias citas.
+admin puede verificar, suspender o activar doctores/clínicas.
+
+Doctor independiente
+
+un doctor puede ofrecer servicios sin clínica.
+debe definir al menos un lugar/modalidad de atención.
+puede atender en consultorio propio, casa/oficina, domicilio u online.
+puede configurar precios, servicios y horarios propios.
+puede aparecer en búsquedas aunque no pertenezca a una clínica.
+
+Clínica
+
+una clínica administra su perfil, ubicación, doctores asociados, servicios y horarios.
+una clínica puede recibir citas de varios doctores al mismo tiempo.
+una clínica puede tener agenda centralizada de todos sus doctores.
+una clínica puede aceptar, bloquear o cancelar citas según sus permisos.
+
+Doctor + clínica
+
+un doctor puede estar asociado a varias clínicas.
+un doctor solo puede recibir citas en clínicas donde esté asociado.
+si la relación doctor-clínica está inactiva, no puede recibir nuevas citas ahí.
+el doctor puede tener horarios diferentes por clínica.
+
+Lugar de atención
+
+toda cita debe tener lugar o modalidad definida.
+tipos posibles:
+clínica
+consultorio privado
+oficina/casa
+domicilio
+online
+si es presencial, debe tener dirección.
+si es online, no requiere dirección física.
+un doctor puede tener varios lugares de atención.
+una clínica puede ser un lugar de atención institucional.
+
+Agenda y disponibilidad
+
+la disponibilidad se define por doctor + lugar de atención.
+una cita solo puede crearse dentro de un bloque disponible.
+no puede existir doble cita activa para el mismo doctor en el mismo horario.
+una clínica puede tener varias citas simultáneas si son con doctores distintos.
+los bloqueos de disponibilidad tienen prioridad sobre los horarios normales.
+no se pueden agendar citas en fechas pasadas.
+la duración de la cita depende del servicio o configuración del doctor.
+
+Citas
+
+una cita puede ser:
+con doctor independiente
+con doctor dentro de clínica
+con clínica y doctor asignado
+toda cita inicia como pendiente o confirmada.
+una cita pendiente no debería considerarse final hasta ser confirmada.
+una cita confirmada bloquea el horario.
+una cita cancelada libera el horario.
+una cita completada no debe editarse normalmente.
+cancelar o reprogramar debe tener límite de tiempo, ejemplo: 12 o 24 horas antes.
+al crear cita, se notifica al paciente y al doctor; si hay clínica, también a la clínica.
+
+Servicios y precios
+
+un servicio puede pertenecer a un doctor independiente, a una clínica o a una relación doctor-clínica.
+no se puede agendar un servicio que no esté disponible para ese doctor/lugar.
+el precio mostrado debe guardarse al momento de reservar.
+cambios futuros de precio no deben alterar citas ya creadas.
+
+Búsqueda
+
+el paciente puede buscar por especialidad, ubicación, modalidad y disponibilidad.
+deben aparecer doctores independientes y clínicas.
+si el doctor atiende online, puede aparecer aunque no esté cerca.
+si el doctor no tiene disponibilidad, puede mostrarse el perfil, pero no reservar.
+perfiles suspendidos o inactivos no aparecen en búsqueda.
+
+Perfiles
+
+doctor debe poder editar foto, bio, especialidades, títulos, experiencia, servicios, precios, lugares y horarios.
+clínica debe poder editar logo, portada, galería, ubicación, contacto, doctores, servicios y horarios.
+doctor necesita al menos una especialidad para aparecer correctamente.
+clínica necesita ubicación para aparecer en mapa.
+verificación solo la asigna admin.
+
+Reviews
+
+solo pacientes con cita completada pueden dejar review.
+una cita solo puede tener una review.
+el paciente puede calificar doctor y/o clínica.
+no se permiten reviews de citas canceladas, pendientes o bloqueadas.
+
+Seguridad
+
+cada usuario solo accede a recursos propios.
+endpoints deben validar rol y propiedad.
+contraseñas siempre hasheadas.
+entradas validadas contra SQL injection, XSS y datos basura.
+acciones importantes deben auditarse: crear cita, cancelar, editar perfil, cambiar horario, cambiar precio.

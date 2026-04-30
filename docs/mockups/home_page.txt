@@ -1,0 +1,22 @@
+What it does:
+
+Branding and trust
+Quick search (specialty + location)
+Introduces value proposition
+
+Main sections:
+
+Navbar (Home, Search, Login)
+Hero section:
+Specialty input
+Location input
+Search button
+Benefits section (3 cards)
+Marketing section (image + text)
+Footer
+
+Flow:
+User enters app
+→ Inputs specialty + location
+→ Clicks search
+→ Redirect to Search Map

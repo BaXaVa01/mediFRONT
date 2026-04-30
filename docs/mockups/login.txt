@@ -1,0 +1,21 @@
+Purpose: Authentication gate before critical actions
+
+What it does:
+
+Authenticates user
+Protects access to profiles and booking
+
+Main elements:
+
+Email input
+Password input
+Remember me checkbox
+Login button
+Link to register
+
+Flow:
+User selects doctor/clinic
+→ System detects no authentication
+→ Redirect to Login
+→ Successful login
+→ Redirect to previously selected profile

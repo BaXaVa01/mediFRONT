@@ -1,0 +1,126 @@
+You are working on the MediFind prototype frontend.
+
+Your job tonight:
+Create the initial React UI project structure and implement these screens:
+
+1. Home page
+2. Search map page
+3. Login page
+4. Doctor/Clinic profile page
+
+Context folders:
+- docs/logic contains all business rules, MVP rules, data structure, and product documentation.
+- docs/mockups contains screen mockups as images and matching .txt files explaining each screen, and the pallete colors you will follow.
+
+Before coding:
+1. Read GEMINI.md if it exists.
+2. Read everything inside docs/logic.
+3. Inspect docs/mockups.
+4. For each mockup image, read the matching .txt file.
+   Example:
+   - home_page.png
+   - home_page.txt
+
+Build flow:
+Home page -> Search map -> select doctor/clinic -> Login -> Doctor/Clinic profile.
+
+Important:
+- The user must be able to navigate through the full flow.
+- Use mock data only.
+- Do not connect to real backend yet.
+- Keep API/data access separated so it can later be replaced with real HTTP requests.
+- Use React Router for navigation.
+- Use TypeScript.
+- Use Tailwind CSS.
+- Use reusable components.
+- UI must follow the visual mockups as closely as possible.
+- Use the color palette from docs/logic.
+- Use Leaflet or a placeholder map component if Leaflet setup becomes blocking.
+- The search map must show doctors/clinics from mock data.
+- Selecting a doctor or clinic should redirect to login first.
+- After successful mock login, redirect to the selected doctor/clinic profile.
+- If no selected profile exists after login, redirect to search map.
+
+Architecture:
+Use this final structure:
+
+mediFRONT/src/
+  assets/
+  components/
+    layout/
+      MainLayout.tsx
+      Navbar.tsx
+      Footer.tsx
+    ui/
+      Button.tsx
+      Input.tsx
+      Badge.tsx
+      Card.tsx
+    cards/
+      DoctorCard.tsx
+      ClinicCard.tsx
+    map/
+      SearchMap.tsx
+      MapMarkerCard.tsx
+    forms/
+      LoginForm.tsx
+
+  hooks/
+    useAuth.ts
+    useSelectedProfile.ts
+
+  pages/
+    HomePage.tsx
+    SearchMapPage.tsx
+    LoginPage.tsx
+    ProfilePage.tsx
+
+  services/
+    api/
+      authApi.ts
+      doctorsApi.ts
+      clinicsApi.ts
+
+  store/
+    authStore.ts
+    selectedProfileStore.ts
+
+  types/
+    auth.ts
+    doctor.ts
+    clinic.ts
+    search.ts
+
+  utils/
+    routes.ts
+    mockData.ts
+    formatters.ts
+
+
+Security / quality:
+- Follow OWASP frontend basics.
+- No secrets in frontend.
+- Do not use dangerouslySetInnerHTML.
+- Validate form input.
+- Keep components small and reusable.
+- Avoid hardcoding business logic inside visual components.
+- Do not implement features outside the MVP unless needed for navigation.
+- Do not delete documentation files.
+- Do not modify docs/logic unless explicitly required.
+
+Expected output:
+1. Working frontend project.
+2. Navigation flow fully functional.
+3. Mock login functional.
+4. Mock profile data rendered.
+5. README section explaining how to run with Docker and local dev.
+6. A short summary of what was created and what remains pending.
+
+Work iteratively:
+- First create project structure.
+- Then implement routing.
+- Then mock data.
+- Then each page.
+- Then polish visual similarity to mockups.
+- Then run/build/test.
+- Fix errors until the app starts successfully.

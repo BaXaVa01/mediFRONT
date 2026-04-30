@@ -1,0 +1,33 @@
+What it does:
+
+Displays doctors/clinics list (left)
+Displays map with markers (right)
+Allows filtering
+
+Main elements:
+
+Doctor cards:
+Photo
+Specialty
+Rating
+Price range
+Map:
+Markers with price labels
+Filters:
+Specialty
+Availability
+Price
+Insurance
+
+Behavior:
+
+Hover card → highlight map marker
+Click marker → highlight card
+Click "View Profile" → select doctor/clinic
+
+flow:
+User arrives from Home
+→ Sees list + map
+→ Selects doctor/clinic
+→ IF not authenticated → Login
+→ IF authenticated → Profile

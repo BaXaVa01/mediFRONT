@@ -1,0 +1,77 @@
+auth
+
+POST /auth/register
+POST /auth/login
+POST /auth/refresh
+POST /auth/logout
+GET /auth/me
+
+pacientes
+
+GET /patients/me
+PATCH /patients/me
+
+doctores
+
+POST /doctors/profile
+GET /doctors
+GET /doctors/:id
+PATCH /doctors/me/profile
+GET /doctors/me/appointments
+
+clínicas
+
+POST /clinics/profile
+GET /clinics
+GET /clinics/:id
+PATCH /clinics/me/profile
+GET /clinics/me/appointments
+
+especialidades
+
+GET /specialties
+POST /specialties admin después, pero útil para semilla
+
+búsqueda
+
+GET /search?specialty=&city=&modality=&date=
+GET /search/doctors
+GET /search/clinics
+
+lugares de atención
+
+POST /care-locations
+GET /care-locations/me
+PATCH /care-locations/:id
+DELETE /care-locations/:id
+
+servicios/precios
+
+POST /services
+GET /services?doctorId=&clinicId=
+PATCH /services/:id
+DELETE /services/:id
+
+disponibilidad/horarios
+
+POST /availability
+GET /availability?doctorId=&locationId=&date=
+PATCH /availability/:id
+DELETE /availability/:id
+POST /availability/blocks
+
+citas
+
+POST /appointments
+GET /appointments/me
+GET /appointments/:id
+PATCH /appointments/:id/confirm
+PATCH /appointments/:id/cancel
+PATCH /appointments/:id/reschedule
+
+mínimo admin
+
+GET /admin/users
+PATCH /admin/doctors/:id/verify
+PATCH /admin/clinics/:id/verify
+PATCH /admin/users/:id/status

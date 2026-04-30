@@ -1,0 +1,25 @@
+
+What it does:
+
+Displays doctor expertise and credentials
+Builds direct trust
+
+Main sections:
+
+Photo + name + specialty
+Rating
+Location + clinic
+About
+Services (pricing)
+Specialties (tags)
+Education
+Experience
+Clinics association
+Next availability
+
+Flow:
+User enters doctor profile
+→ Reviews experience and specialties
+→ Checks availability
+→ (Future) selects time slot
+→ Books appointment

@@ -1,0 +1,25 @@
+
+
+Okey tengo esta idea para un proyecto y quiero que me ayudes a afinarlo. Para ello me estoy inspirando de Doctoralia y TopDoctors, por lo que antes que me respondas quiero que hagas una investigacion a estos dos sistemas. 
+
+Primero que nada estos son los aspectos que quiero considerar para que el sistema sea atractivo y funcional:
+Para los pacientes el sistema permitira:
+Llevar una hoja/expediente medico 
+Buscar doctores en base a sus necesidades/padecimientos y loclaizacion 
+Agendar una cita desde el sistema en base a la disponibilidad del doctor
+Recibir recordatorios de sus citas
+Ver las calificaciones/ post de los doctores para analizar con cual desea atenderse
+Publicar dudas (de alcance publico) para que docotores especialistas le respondan
+Ver los precios de las consultas especificados por la propia clinica
+Puede ser atendido en linea en caso que se pueda por el doctor (tiene que tener una linea directa con el doctor en la que le puede enviar texto, imagenes, videos)
+
+En el caso de las clinicas o doctores a los que le venderemos el servicio, sus ventajas incluiran: 
+Puede publicarse gratuitamente en el sistema como doctor (aunque no sera verificado sino tiene un subscripcion) asi pudiendo crear un perfil que los pacientes pueden consultar
+Puede manejar las hojas clinicas de sus pacientes, asi llevando un control de sus pacientes y teniendo al alcance el expediente/historial/notas del paciente al que atendera (Texto/Imagenes/videos/radiografias/etc)
+Puede llevar evidencia del progreso del paciente
+Tiene un sistema de gestion estilo calendario para los pacientes, en el que los propios pacientes se pueden agendar (el doctor/clinica podra configurar el tiempo en el que los pacientes pueden agendarse)
+Juntandolo con el sistema de buscar pacientes, estos pueden crear un perfil en linea (tipo instagram) en el que podran compartir sus experiencias para atraer nuevos pacientes
+Apareceran en la busqueda de los pacientes (por lo que tendran una mayor cobertura ) 
+
+
+
