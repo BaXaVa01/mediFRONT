@@ -4,6 +4,7 @@ import { Navbar } from './components/layout/Navbar';
 import HomePage from './pages/HomePage';
 import SearchPage from './pages/SearchPage';
 import LoginPage from './pages/LoginPage';
+import ProfilePage from './pages/ProfilePage';
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/buscar" element={<SearchPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/perfil" element={<ProfilePage />} />
             {/* Fallback to home */}
             <Route path="*" element={<HomePage />} />
           </Routes>
