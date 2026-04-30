@@ -9,6 +9,8 @@ import {
   ChevronRight, ArrowLeft, ShieldCheck, 
   Briefcase, GraduationCap, Stethoscope 
 } from 'lucide-react';
+import type { Doctor } from '../types/doctor';
+import type { Clinic } from '../types/clinic';
 
 const ProfilePage: React.FC = () => {
   const { isAuthenticated } = useAuthStore();
@@ -38,7 +40,8 @@ const ProfilePage: React.FC = () => {
   }
 
   const isDoctor = selectedType === 'doctor';
-  const doctor = isDoctor ? (profile as any) : null;
+  const doctor = isDoctor ? (profile as Doctor) : null;
+  const clinic = !isDoctor ? (profile as Clinic) : null;
 
   return (
     <div className="min-h-screen pb-20">
@@ -58,7 +61,7 @@ const ProfilePage: React.FC = () => {
           <div className="p-8 sm:flex gap-8">
             <div className="flex-shrink-0 mb-6 sm:mb-0">
               <img 
-                src={isDoctor ? doctor.photo : (profile as any).logo} 
+                src={isDoctor ? doctor!.photo : clinic!.logo} 
                 alt={profile.name}
                 className="w-32 h-32 rounded-2xl object-cover ring-4 ring-white shadow-lg"
               />
@@ -72,7 +75,7 @@ const ProfilePage: React.FC = () => {
                 </div>
               </div>
               <p className="text-xl text-[#5A9BD4] font-medium mb-4">
-                {isDoctor ? doctor.specialty : 'Clínica / Hospital'}
+                {isDoctor ? doctor!.specialty : 'Clínica / Hospital'}
               </p>
               
               <div className="flex flex-wrap gap-6 text-[#4A628A]">
@@ -107,7 +110,7 @@ const ProfilePage: React.FC = () => {
                       Títulos y Formación
                     </h2>
                     <ul className="space-y-3">
-                      {doctor.titles.map((title: string, i: number) => (
+                      {doctor!.titles.map((title: string, i: number) => (
                         <li key={i} className="flex gap-3 text-[#4A628A]">
                           <ChevronRight className="h-5 w-5 text-[#A3C9A8] shrink-0" />
                           {title}
@@ -122,7 +125,7 @@ const ProfilePage: React.FC = () => {
                       Experiencia
                     </h2>
                     <div className="bg-[#FDF9F3] p-4 rounded-xl border border-[#E6CBB8]/30">
-                      <p className="font-medium text-[#1C365C]">{doctor.experience}</p>
+                      <p className="font-medium text-[#1C365C]">{doctor!.experience}</p>
                       <p className="text-sm text-[#4A628A]">Práctica clínica activa</p>
                     </div>
                   </section>
@@ -148,7 +151,7 @@ const ProfilePage: React.FC = () => {
             <div className="space-y-6">
               <div className="bg-[#1C365C] text-white p-6 rounded-2xl shadow-lg">
                 <p className="text-sm text-white/70 mb-1">Costo de consulta</p>
-                <p className="text-3xl font-bold mb-6">${isDoctor ? doctor.price : 'Varía'} MXN</p>
+                <p className="text-3xl font-bold mb-6">${isDoctor ? doctor!.price : 'Varía'} MXN</p>
                 
                 <Button variant="secondary" className="w-full h-12 text-lg mb-4">
                   Reservar Cita
@@ -165,7 +168,7 @@ const ProfilePage: React.FC = () => {
                 </h3>
                 {isDoctor ? (
                   <div className="grid grid-cols-1 gap-2">
-                    {doctor.availability.map((day: string, i: number) => (
+                    {doctor!.availability.map((day: string, i: number) => (
                       <div key={i} className="flex justify-between items-center text-sm py-2 border-b border-gray-50 last:border-0">
                         <span className="text-[#4A628A]">{day}</span>
                         <span className="font-medium text-[#1C365C]">09:00 - 18:00</span>
@@ -184,7 +187,7 @@ const ProfilePage: React.FC = () => {
                     Aseguradoras
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    {doctor.insurance.map((ins: string, i: number) => (
+                    {doctor!.insurance.map((ins: string, i: number) => (
                       <span key={i} className="text-xs font-bold text-[#5A9BD4] bg-[#5A9BD4]/5 px-2 py-1 rounded">
                         {ins}
                       </span>
