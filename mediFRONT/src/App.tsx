@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/layout/Navbar';
 import HomePage from './pages/HomePage';
 import SearchPage from './pages/SearchPage';
+import LoginPage from './pages/LoginPage';
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/buscar" element={<SearchPage />} />
+            <Route path="/login" element={<LoginPage />} />
             {/* Fallback to home */}
             <Route path="*" element={<HomePage />} />
           </Routes>
