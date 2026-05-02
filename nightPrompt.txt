@@ -1,6 +1,5 @@
 You are working on the MediFind prototype frontend.
 
-Your job tonight:
 Create the initial React UI project structure and implement these screens:
 
 1. Home page

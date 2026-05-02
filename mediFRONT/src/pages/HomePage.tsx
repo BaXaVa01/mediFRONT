@@ -1,18 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, MapPin, Calendar, Shield, Zap } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { Input } from '../components/ui/Input';
+import { useLocationStore } from '../store/locationStore';
 import heroImg from '../assets/hero.png';
 
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
+  const setUserCoords = useLocationStore((state) => state.setUserCoords);
   const [specialty, setSpecialty] = useState('');
   const [location, setLocation] = useState('');
 
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          setUserCoords([pos.coords.latitude, pos.coords.longitude]);
+        },
+        (err) => console.error('Geolocation error:', err)
+      );
+    }
+  }, [setUserCoords]);
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    navigate('/buscar');
+    navigate(`/buscar?specialty=${encodeURIComponent(specialty)}&loc=${encodeURIComponent(location)}`);
   };
 
   return (

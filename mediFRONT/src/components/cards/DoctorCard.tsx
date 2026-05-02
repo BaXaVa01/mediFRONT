@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Star, MapPin, DollarSign } from 'lucide-react';
+import { Star, MapPin, DollarSign, Navigation } from 'lucide-react';
 import type { Doctor } from '../../types/doctor';
 import { useSelectedProfileStore } from '../../store/selectedProfileStore';
 import { Button } from '../ui/Button';
@@ -11,12 +11,17 @@ interface DoctorCardProps {
 
 const DoctorCard: React.FC<DoctorCardProps> = ({ doctor }) => {
   const navigate = useNavigate();
-  const setSelected = useSelectedProfileStore((state) => state.setSelected);
+  const { setSelected, setRoutingTarget } = useSelectedProfileStore();
 
-  const handleVerPerfil = () => {
+  const handleViewProfile = () => {
     setSelected(doctor.id, 'doctor');
     navigate('/perfil');
   };
+
+  const handleShowRoute = () => {
+    setRoutingTarget(doctor.id);
+  };
+
 
   return (
     <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-4 flex gap-4 hover:shadow-md transition-shadow">
@@ -48,8 +53,17 @@ const DoctorCard: React.FC<DoctorCardProps> = ({ doctor }) => {
           </div>
         </div>
 
-        <div className="mt-4">
-          <Button onClick={handleVerPerfil} className="w-full sm:w-auto">
+        <div className="mt-4 flex gap-2">
+          <Button 
+            variant="outline" 
+            size="sm" 
+            onClick={handleShowRoute}
+            className="flex items-center gap-1 border-[#5A9BD4] text-[#5A9BD4] hover:bg-[#5A9BD4]/10"
+          >
+            <Navigation className="h-3.5 w-3.5" />
+            Ruta
+          </Button>
+          <Button onClick={handleViewProfile} className="w-full sm:w-auto">
             Ver Perfil
           </Button>
         </div>
