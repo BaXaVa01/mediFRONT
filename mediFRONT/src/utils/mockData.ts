@@ -8,10 +8,18 @@ export const mockDoctors: Doctor[] = [
     specialty: 'Cardiología',
     bio: 'Especialista en cardiología preventiva con más de 10 años de experiencia.',
     rating: 4.8,
+    reviewCount: 124,
     price: 80,
     photo: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=200&h=200',
     location: { lat: 12.1364, lng: -86.2514, address: 'Bolonia, Managua' },
+    locations: [{ lat: 12.1364, lng: -86.2514, address: 'Bolonia, Managua' }],
     availability: ['Lunes', 'Miércoles', 'Viernes'],
+    availabilityPreview: [
+      { date: 'Hoy', time: '14:00' },
+      { date: 'Mañana', time: '09:00' },
+      { date: 'Jue, 12', time: '11:30' }
+    ],
+    consultationTypes: ['Presencial', 'En línea'],
     insurance: ['MetLife', 'AXA'],
     titles: ['Médico Cirujano (UNAM)', 'Especialidad en Cardiología (INC)'],
     experience: '15 años',
@@ -23,10 +31,18 @@ export const mockDoctors: Doctor[] = [
     specialty: 'Pediatría',
     bio: 'Apasionada por el cuidado de los más pequeños.',
     rating: 4.9,
+    reviewCount: 89,
     price: 60,
     photo: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=200&h=200',
     location: { lat: 12.1481, lng: -86.2721, address: 'Los Robles, Managua' },
+    locations: [{ lat: 12.1481, lng: -86.2721, address: 'Los Robles, Managua' }],
     availability: ['Martes', 'Jueves', 'Sábado'],
+    availabilityPreview: [
+      { date: 'Mañana', time: '10:00' },
+      { date: 'Jue, 12', time: '15:00' },
+      { date: 'Vie, 13', time: '09:30' }
+    ],
+    consultationTypes: ['Presencial'],
     insurance: ['GNP', 'Seguros Monterrey'],
     titles: ['Médico Cirujano (Anáhuac)', 'Especialidad en Pediatría (Hospital Infantil)'],
     experience: '8 años',
@@ -41,7 +57,14 @@ export const mockClinics: Clinic[] = [
     bio: 'Centro hospitalario de alta especialidad.',
     logo: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=200&h=200',
     rating: 4.7,
+    reviewCount: 312,
     location: { lat: 12.1150, lng: -86.2360, address: 'Carretera a Masaya, Managua' },
+    locations: [{ lat: 12.1150, lng: -86.2360, address: 'Carretera a Masaya, Managua' }],
+    availabilityPreview: [
+      { date: 'Hoy', time: '16:00' },
+      { date: 'Mañana', time: '08:00' }
+    ],
+    consultationTypes: ['Presencial'],
     doctors: ['d1'],
     services: ['Urgencias', 'Laboratorio', 'Rayos X'],
   }
