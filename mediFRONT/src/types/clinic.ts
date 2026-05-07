@@ -1,4 +1,4 @@
-import { Location, AvailabilitySlot } from './doctor';
+import type { Location, AvailabilitySlot } from './doctor';
 
 export interface Clinic {
   id: string;
