@@ -9,6 +9,7 @@ import RegisterPatientPage from './pages/RegisterPatientPage';
 import RegisterDoctorPage from './pages/RegisterDoctorPage';
 import RegisterClinicPage from './pages/RegisterClinicPage';
 import ProfilePage from './pages/ProfilePage';
+import ProfessionalPage from './pages/ProfessionalPage';
 
 const App: React.FC = () => {
   return (
@@ -25,6 +26,8 @@ const App: React.FC = () => {
             <Route path="/registro/medico" element={<RegisterDoctorPage />} />
             <Route path="/registro/clinica" element={<RegisterClinicPage />} />
             <Route path="/perfil" element={<ProfilePage />} />
+            <Route path="/pro" element={<ProfessionalPage />} />
+            <Route path="/pro/calendar" element={<ProfessionalPage />} />
             {/* Fallback to home */}
             <Route path="*" element={<HomePage />} />
           </Routes>

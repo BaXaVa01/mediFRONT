@@ -67,4 +67,14 @@ export interface Doctor {
   gallery: string[];
   reviews: Review[];
   schedule: ScheduleDay[];
+  appointments: Appointment[];
+}
+
+export interface Appointment {
+  id: string;
+  patientName: string;
+  time: string;
+  date: string;
+  type: 'Consulta' | 'Seguimiento' | 'Urgencia';
+  status: 'Confirmada' | 'Pendiente' | 'Cancelada';
 }

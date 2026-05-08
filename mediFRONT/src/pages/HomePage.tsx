@@ -4,7 +4,8 @@ import { Search, MapPin, Calendar, Shield, Zap } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { Input } from '../components/ui/Input';
 import { useLocationStore } from '../store/locationStore';
-import heroImg from '../assets/hero.png';
+import homePageOnBackground from '../assets/homepage.png';
+import doctor from '../assets/doctor.png';
 
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
@@ -31,54 +32,58 @@ const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#FDF9F3] text-[#1C365C]">
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src={heroImg} 
-            alt="Hero" 
-            className="w-full h-full object-cover opacity-20"
-          />
-        </div>
-        
-        <div className="container mx-auto px-4 z-10 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Encuentra tu médico ideal
-          </h1>
-          <p className="text-xl md:text-2xl mb-12 opacity-90 max-w-2xl mx-auto">
-            La plataforma más confiable para agendar citas médicas con los mejores especialistas de tu zona.
-          </p>
+      <section className="relative min-h-[500px] flex items-center bg-[#5A9BD4] overflow-hidden py-12">
+        <div className="container mx-auto px-4 z-10 flex flex-col md:flex-row items-center gap-12">
+          {/* Left Side: Content */}
+          <div className="flex-1 text-left text-white">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              Encuentra tu médico ideal
+            </h1>
+            <p className="text-xl md:text-2xl mb-12 opacity-90 max-w-2xl">
+              La plataforma más confiable para agendar citas médicas con los mejores especialistas de tu zona.
+            </p>
 
-          <form 
-            onSubmit={handleSearch}
-            className="bg-white p-4 rounded-2xl shadow-xl flex flex-col md:flex-row gap-4 max-w-4xl mx-auto"
-          >
-            <div className="flex-1 relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <Input
-                type="text"
-                placeholder="Especialidad (ej. Cardiología)"
-                className="pl-12 border-none bg-gray-50 h-14"
-                value={specialty}
-                onChange={(e) => setSpecialty(e.target.value)}
-              />
-            </div>
-            <div className="flex-1 relative">
-              <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <Input
-                type="text"
-                placeholder="Ubicación (ej. Managua)"
-                className="pl-12 border-none bg-gray-50 h-14"
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
-              />
-            </div>
-            <Button 
-              type="submit"
-              className="h-14 px-10 bg-[#5A9BD4] hover:bg-[#4a8bc4] text-white text-lg font-semibold rounded-xl"
+            <form 
+              onSubmit={handleSearch}
+              className="bg-white/10 backdrop-blur-md p-2 rounded-2xl shadow-lg border border-white/20 flex flex-col md:flex-row gap-2 w-full"
             >
-              Buscar
-            </Button>
-          </form>
+              <div className="flex-1 relative">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 w-5 h-5" />
+                <Input
+                  type="text"
+                  placeholder="Especialidad"
+                  className="pl-12 border-none bg-white/10 text-white placeholder:text-white/60 h-14 focus:bg-white/20"
+                  value={specialty}
+                  onChange={(e) => setSpecialty(e.target.value)}
+                />
+              </div>
+              <div className="flex-1 relative">
+                <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 w-5 h-5" />
+                <Input
+                  type="text"
+                  placeholder="Ubicación"
+                  className="pl-12 border-none bg-white/10 text-white placeholder:text-white/60 h-14 focus:bg-white/20"
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
+                />
+              </div>
+              <Button 
+                type="submit"
+                className="h-14 px-8 bg-white text-[#5A9BD4] hover:bg-white/90 text-lg font-bold rounded-xl"
+              >
+                Buscar
+              </Button>
+            </form>
+          </div>
+
+          {/* Right Side: Illustration */}
+          <div className="flex-1 hidden md:block">
+            <img 
+              src={homePageOnBackground} 
+              alt="MediFind Illustration" 
+              className="w-full h-auto object-contain max-h-[500px]"
+            />
+          </div>
         </div>
       </section>
 
@@ -119,13 +124,13 @@ const HomePage: React.FC = () => {
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-16">
           <div className="flex-1">
             <img 
-              src={heroImg} 
+              src={doctor} 
               alt="Marketing" 
               className="rounded-3xl shadow-2xl w-full h-[400px] object-cover"
             />
           </div>
           <div className="flex-1">
-            <h2 className="text-4xl font-bold mb-6">Salud al alcance de un clic</h2>
+            <h2 className="text-4xl font-bold mb-6">Salud al alcance de un click</h2>
             <p className="text-lg mb-8 opacity-90 leading-relaxed">
               MediFind conecta a miles de pacientes con los mejores servicios de salud. 
               Nuestra misión es facilitar el acceso a una atención médica de calidad, 

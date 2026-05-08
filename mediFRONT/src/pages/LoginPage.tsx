@@ -56,9 +56,12 @@ const LoginPage: React.FC = () => {
 
         <p className="mt-8 text-center text-sm text-[#4A628A]">
           ¿No tienes cuenta?{' '}
-          <a href="#" className="font-semibold text-[#5A9BD4] hover:underline">
+          <button 
+            onClick={() => navigate('/registro')}
+            className="font-semibold text-[#5A9BD4] hover:underline"
+          >
             Regístrate aquí
-          </a>
+          </button>
         </p>
       </div>
     </div>

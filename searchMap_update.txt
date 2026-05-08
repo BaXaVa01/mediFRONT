@@ -1,0 +1,69 @@
+Improve the Search Map page and doctor/clinic result cards.
+
+Goal:
+The search result cards must now include doctor availability and location information, not only name, rating, and price (see /docs/mockups/doctor_card.png).
+
+Context:
+The result card should appear beside the map and show:
+- doctor/specialist information
+- availability
+- location
+- price/service range
+- quick dates or available time slots
+
+Required card content:
+1. Doctor photo
+2. Doctor name
+3. Specialty
+4. Rating and review count
+5. Main location / clinic / care location
+6. Consultation modality:
+   - in-person
+   - online
+   - home visit if available
+7. Price range or first consultation price
+8. Availability preview:
+   - Today / Tomorrow / next dates
+   - show 3-5 available date chips
+   - show next available time if possible
+9. Button:
+   - View Profile
+   - Book Appointment optional but can redirect to profile for now
+
+Behavior:
+1. Search page keeps the left list and right map layout.
+2. Selecting View Profile stores selected doctor/clinic.
+3. If user is not authenticated, redirect to /login.
+4. After login, redirect to the selected profile.
+5. If user is authenticated, go directly to profile.
+6. Map markers should stay synced with cards if currently implemented.
+7. Do not remove the current map.
+
+Mock data updates:
+Extend doctor/clinic mock data with:
+- availabilityPreview
+- locations
+- services
+- consultationTypes
+- nextAvailableSlot
+
+Expected components:
+- components/cards/SearchResultCard.tsx
+- components/cards/AvailabilityPreview.tsx
+- components/map/SearchMap.tsx if needed
+- data/mockDoctors.ts
+- data/mockClinics.ts
+
+Design:
+Match the visual style from the mockups:
+- soft medical palette
+- rounded cards
+- subtle shadows
+- clear CTA
+- availability chips similar to the reference document
+
+After implementing:
+- Make sure search still works.
+- Make sure routing still works.
+- Fix TypeScript/build errors.
+- Summarize what changed.

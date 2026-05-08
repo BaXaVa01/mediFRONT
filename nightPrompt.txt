@@ -1,11 +1,11 @@
-You are working on the MediFind prototype frontend.
+Current goal:
+Improve the existing prototype without breaking current navigation.
 
-Create the initial React UI project structure and implement these screens:
+1. Doctor/clinic professional portal 
+2. Search map page (update) the informationial card of the doctor need to be update
+3. Login page (update) see in /docs/mockups
+4. Doctor/Clinic profile page (update) see details /docs/mockups/profesionalProfile it will include the components you need to create 
 
-1. Home page
-2. Search map page
-3. Login page
-4. Doctor/Clinic profile page
 
 Context folders:
 - docs/logic contains all business rules, MVP rules, data structure, and product documentation.
@@ -19,9 +19,6 @@ Before coding:
    Example:
    - home_page.png
    - home_page.txt
-
-Build flow:
-Home page -> Search map -> select doctor/clinic -> Login -> Doctor/Clinic profile.
 
 Important:
 - The user must be able to navigate through the full flow.
@@ -43,58 +40,7 @@ Important:
 Architecture:
 Use this final structure:
 
-mediFRONT/src/
-  assets/
-  components/
-    layout/
-      MainLayout.tsx
-      Navbar.tsx
-      Footer.tsx
-    ui/
-      Button.tsx
-      Input.tsx
-      Badge.tsx
-      Card.tsx
-    cards/
-      DoctorCard.tsx
-      ClinicCard.tsx
-    map/
-      SearchMap.tsx
-      MapMarkerCard.tsx
-    forms/
-      LoginForm.tsx
-
-  hooks/
-    useAuth.ts
-    useSelectedProfile.ts
-
-  pages/
-    HomePage.tsx
-    SearchMapPage.tsx
-    LoginPage.tsx
-    ProfilePage.tsx
-
-  services/
-    api/
-      authApi.ts
-      doctorsApi.ts
-      clinicsApi.ts
-
-  store/
-    authStore.ts
-    selectedProfileStore.ts
-
-  types/
-    auth.ts
-    doctor.ts
-    clinic.ts
-    search.ts
-
-  utils/
-    routes.ts
-    mockData.ts
-    formatters.ts
-
+For architecture I need you to suggest me how can we separate 2 differents parts : Common User and Doctors/clinics, as this project is a prototype, i want to create a monolyth and use one single project for both parts, common users will use the doctor searchs, locate the doctor in the map, and see doctors profiles, doctors/clinics will use an ui with a calendar to visualize the appointments they have. The point this project should sepparate: https://domain/homePage (search for doctors) and https://domain/professional (doctors calendar)
 
 Security / quality:
 - Follow OWASP frontend basics.
@@ -110,7 +56,6 @@ Security / quality:
 Expected output:
 1. Working frontend project.
 2. Navigation flow fully functional.
-3. Mock login functional.
 4. Mock profile data rendered.
 5. README section explaining how to run with Docker and local dev.
 6. A short summary of what was created and what remains pending.

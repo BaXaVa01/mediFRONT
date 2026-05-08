@@ -1,0 +1,72 @@
+Implement the improved authentication and account creation flow.
+Goal:
+The current login/register flow must be reorganized so the user first chooses what type of account they want:
+- Patient
+- Doctor / Specialist
+- Clinic Manager
+
+Required flow:
+Login page
+→ "Create account"
+→ Account type selection page
+→ Specific register form depending on selected role
+
+Routes:
+- /login
+- /register
+- /register/patient
+- /register/doctor
+- /register/clinic
+
+Requirements:
+1. Create an account type selection screen with 3 cards (see /docs/mockups/create_account.png):
+   - I am a Patient
+   - I am a Doctor / Specialist
+   - I am a Clinic Manager
+2. Each card must redirect to its specific form.
+3. Patient form (see /docs/mockups/patient_form.png):
+   - full name
+   - email
+   - password
+   - phone optional
+4. Doctor form (see /docs/mockups/profesional_form.png):
+   - full name
+   - professional name
+   - ubication where he/she works
+   - specialty
+   - number
+   - email
+   - password
+   - phone
+5. Clinic form(see /docs/mockups/clinic_form.png):
+   - clinic name
+   - number of doctors
+   - city
+   - email
+
+6. Use existing mockup images from docs/mockups if available.
+7. Forms do not need real backend integration.
+8. On submit, simulate successful registration.
+9. After mock registration:
+   - patient redirects to /search
+   - doctor redirects to /pro/calendar
+   - clinic redirects to /pro/calendar
+10. Add basic frontend validation.
+11. Keep design consistent with MediFind palette and existing UI.
+12. Do not remove the existing login flow.
+13. Login should still support mock authentication.
+
+Expected files/components:
+- pages/RegisterPage.tsx
+- pages/RegisterPatientPage.tsx
+- pages/RegisterDoctorPage.tsx
+- pages/RegisterClinicPage.tsx
+- components/forms/RegisterPatientForm.tsx
+- components/forms/RegisterDoctorForm.tsx
+- components/forms/RegisterClinicForm.tsx
+- components/cards/AccountTypeCard.tsx
+
+After implementing:
+- Run npm build or npm run dev validation.
+- Fix TypeScript errors.
+- Summarize what changed.

@@ -50,6 +50,11 @@ export const mockDoctors: Doctor[] = [
       { patientName: 'Carlos M.', comment: 'Excelente atención y muy claro al explicar el diagnóstico.', rating: 5, date: '12 May 2026' },
       { patientName: 'Ana R.', comment: 'El doctor fue muy puntual y profesional.', rating: 4.5, date: '08 Abr 2026' }
     ],
+    appointments: [
+      { id: "a1", patientName: "Juan Pérez", time: "09:00", date: "2026-05-07", type: "Consulta", status: "Confirmada" },
+      { id: "a2", patientName: "María García", time: "11:30", date: "2026-05-07", type: "Seguimiento", status: "Confirmada" },
+      { id: "a3", patientName: "Pedro López", time: "16:00", date: "2026-05-07", type: "Consulta", status: "Pendiente" }
+    ],
     schedule: [
       { day: 'Lunes', hours: '09:00 - 14:00, 16:00 - 18:00' },
       { day: 'Miércoles', hours: '09:00 - 14:00' },
@@ -99,6 +104,7 @@ export const mockDoctors: Doctor[] = [
     reviews: [
       { patientName: 'Lucía G.', comment: 'Trato increíble con los niños, mi hija se sintió muy cómoda.', rating: 5, date: '20 May 2026' }
     ],
+    appointments: [],
     schedule: [
       { day: 'Martes', hours: '10:00 - 16:00' },
       { day: 'Jueves', hours: '10:00 - 16:00' },
