@@ -1,0 +1,4107 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "routing_architecture",
+        "label": "App Routing & Navigation",
+        "nodes": [
+          "app_component",
+          "home_page",
+          "search_page",
+          "login_page",
+          "register_page",
+          "profile_page",
+          "professional_page"
+        ],
+        "relation": "form",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.9,
+        "source_file": "src/App.tsx"
+      },
+      {
+        "id": "registration_flow",
+        "label": "User Onboarding Flow",
+        "nodes": [
+          "register_page",
+          "register_patient_page",
+          "register_doctor_page",
+          "register_clinic_page"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.95,
+        "source_file": "src/pages/RegisterPage.tsx"
+      },
+      {
+        "id": "registration_flow",
+        "label": "Registration Flow",
+        "nodes": [
+          "registerclinicform_handlesubmit",
+          "registerpatientform_handlesubmit",
+          "registerdoctorform_handlesubmit",
+          "authstore_login"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.9,
+        "source_file": "src/components/forms/RegisterClinicForm.tsx"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "tailwind.config.js",
+      "file_type": "code",
+      "source_file": "tailwind.config.js",
+      "source_location": "L1",
+      "community": 15,
+      "norm_label": "tailwind.config.js",
+      "id": "tailwind_config_js"
+    },
+    {
+      "label": "vite.config.ts",
+      "file_type": "code",
+      "source_file": "vite.config.ts",
+      "source_location": "L1",
+      "community": 16,
+      "norm_label": "vite.config.ts",
+      "id": "vite_config_ts"
+    },
+    {
+      "label": "eslint.config.js",
+      "file_type": "code",
+      "source_file": "eslint.config.js",
+      "source_location": "L1",
+      "community": 17,
+      "norm_label": "eslint.config.js",
+      "id": "eslint_config_js"
+    },
+    {
+      "label": "postcss.config.js",
+      "file_type": "code",
+      "source_file": "postcss.config.js",
+      "source_location": "L1",
+      "community": 18,
+      "norm_label": "postcss.config.js",
+      "id": "postcss_config_js"
+    },
+    {
+      "label": "main.tsx",
+      "file_type": "code",
+      "source_file": "src/main.tsx",
+      "source_location": "L1",
+      "community": 5,
+      "norm_label": "main.tsx",
+      "id": "src_main_tsx"
+    },
+    {
+      "label": "App.tsx",
+      "file_type": "code",
+      "source_file": "src/App.tsx",
+      "source_location": "L1",
+      "community": 5,
+      "norm_label": "app.tsx",
+      "id": "src_app_tsx"
+    },
+    {
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "src/App.tsx",
+      "source_location": "L14",
+      "community": 5,
+      "norm_label": "app()",
+      "id": "src_app_app"
+    },
+    {
+      "label": "cn.ts",
+      "file_type": "code",
+      "source_file": "src/utils/cn.ts",
+      "source_location": "L1",
+      "community": 1,
+      "norm_label": "cn.ts",
+      "id": "src_utils_cn_ts"
+    },
+    {
+      "label": "cn()",
+      "file_type": "code",
+      "source_file": "src/utils/cn.ts",
+      "source_location": "L4",
+      "community": 1,
+      "norm_label": "cn()",
+      "id": "utils_cn_cn"
+    },
+    {
+      "label": "mockData.ts",
+      "file_type": "code",
+      "source_file": "src/utils/mockData.ts",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "mockdata.ts",
+      "id": "src_utils_mockdata_ts"
+    },
+    {
+      "label": "mockDoctors",
+      "file_type": "code",
+      "source_file": "src/utils/mockData.ts",
+      "source_location": "L4",
+      "community": 2,
+      "norm_label": "mockdoctors",
+      "id": "utils_mockdata_mockdoctors"
+    },
+    {
+      "label": "mockClinics",
+      "file_type": "code",
+      "source_file": "src/utils/mockData.ts",
+      "source_location": "L116",
+      "community": 2,
+      "norm_label": "mockclinics",
+      "id": "utils_mockdata_mockclinics"
+    },
+    {
+      "label": "RegisterClinicPage.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/RegisterClinicPage.tsx",
+      "source_location": "L1",
+      "community": 1,
+      "norm_label": "registerclinicpage.tsx",
+      "id": "src_pages_registerclinicpage_tsx"
+    },
+    {
+      "label": "RegisterClinicPage()",
+      "file_type": "code",
+      "source_file": "src/pages/RegisterClinicPage.tsx",
+      "source_location": "L6",
+      "community": 1,
+      "norm_label": "registerclinicpage()",
+      "id": "pages_registerclinicpage_registerclinicpage"
+    },
+    {
+      "label": "ProfessionalPage.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/ProfessionalPage.tsx",
+      "source_location": "L1",
+      "community": 6,
+      "norm_label": "professionalpage.tsx",
+      "id": "src_pages_professionalpage_tsx"
+    },
+    {
+      "label": "ProfessionalPage()",
+      "file_type": "code",
+      "source_file": "src/pages/ProfessionalPage.tsx",
+      "source_location": "L8",
+      "community": 6,
+      "norm_label": "professionalpage()",
+      "id": "pages_professionalpage_professionalpage"
+    },
+    {
+      "label": "LoginPage.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/LoginPage.tsx",
+      "source_location": "L1",
+      "community": 1,
+      "norm_label": "loginpage.tsx",
+      "id": "src_pages_loginpage_tsx"
+    },
+    {
+      "label": "LoginPage()",
+      "file_type": "code",
+      "source_file": "src/pages/LoginPage.tsx",
+      "source_location": "L8",
+      "community": 1,
+      "norm_label": "loginpage()",
+      "id": "pages_loginpage_loginpage"
+    },
+    {
+      "label": "SearchPage.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/SearchPage.tsx",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "searchpage.tsx",
+      "id": "src_pages_searchpage_tsx"
+    },
+    {
+      "label": "SearchPage()",
+      "file_type": "code",
+      "source_file": "src/pages/SearchPage.tsx",
+      "source_location": "L7",
+      "community": 2,
+      "norm_label": "searchpage()",
+      "id": "pages_searchpage_searchpage"
+    },
+    {
+      "label": "ProfilePage.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L1",
+      "community": 0,
+      "norm_label": "profilepage.tsx",
+      "id": "src_pages_profilepage_tsx"
+    },
+    {
+      "label": "ProfilePage()",
+      "file_type": "code",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L20",
+      "community": 3,
+      "norm_label": "profilepage()",
+      "id": "pages_profilepage_profilepage"
+    },
+    {
+      "label": "RegisterPage.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/RegisterPage.tsx",
+      "source_location": "L1",
+      "community": 5,
+      "norm_label": "registerpage.tsx",
+      "id": "src_pages_registerpage_tsx"
+    },
+    {
+      "label": "RegisterPage()",
+      "file_type": "code",
+      "source_file": "src/pages/RegisterPage.tsx",
+      "source_location": "L6",
+      "community": 5,
+      "norm_label": "registerpage()",
+      "id": "pages_registerpage_registerpage"
+    },
+    {
+      "label": "RegisterPatientPage.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/RegisterPatientPage.tsx",
+      "source_location": "L1",
+      "community": 1,
+      "norm_label": "registerpatientpage.tsx",
+      "id": "src_pages_registerpatientpage_tsx"
+    },
+    {
+      "label": "RegisterPatientPage()",
+      "file_type": "code",
+      "source_file": "src/pages/RegisterPatientPage.tsx",
+      "source_location": "L6",
+      "community": 1,
+      "norm_label": "registerpatientpage()",
+      "id": "pages_registerpatientpage_registerpatientpage"
+    },
+    {
+      "label": "RegisterDoctorPage.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/RegisterDoctorPage.tsx",
+      "source_location": "L1",
+      "community": 1,
+      "norm_label": "registerdoctorpage.tsx",
+      "id": "src_pages_registerdoctorpage_tsx"
+    },
+    {
+      "label": "RegisterDoctorPage()",
+      "file_type": "code",
+      "source_file": "src/pages/RegisterDoctorPage.tsx",
+      "source_location": "L6",
+      "community": 1,
+      "norm_label": "registerdoctorpage()",
+      "id": "pages_registerdoctorpage_registerdoctorpage"
+    },
+    {
+      "label": "HomePage.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L1",
+      "community": 3,
+      "norm_label": "homepage.tsx",
+      "id": "src_pages_homepage_tsx"
+    },
+    {
+      "label": "HomePage()",
+      "file_type": "code",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L10",
+      "community": 3,
+      "norm_label": "homepage()",
+      "id": "pages_homepage_homepage"
+    },
+    {
+      "label": "AccountTypeCard.tsx",
+      "file_type": "code",
+      "source_file": "src/components/cards/AccountTypeCard.tsx",
+      "source_location": "L1",
+      "community": 5,
+      "norm_label": "accounttypecard.tsx",
+      "id": "src_components_cards_accounttypecard_tsx"
+    },
+    {
+      "label": "AccountTypeCardProps",
+      "file_type": "code",
+      "source_file": "src/components/cards/AccountTypeCard.tsx",
+      "source_location": "L4",
+      "community": 5,
+      "norm_label": "accounttypecardprops",
+      "id": "cards_accounttypecard_accounttypecardprops"
+    },
+    {
+      "label": "AccountTypeCard()",
+      "file_type": "code",
+      "source_file": "src/components/cards/AccountTypeCard.tsx",
+      "source_location": "L11",
+      "community": 5,
+      "norm_label": "accounttypecard()",
+      "id": "cards_accounttypecard_accounttypecard"
+    },
+    {
+      "label": "SearchResultCard.tsx",
+      "file_type": "code",
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "searchresultcard.tsx",
+      "id": "src_components_cards_searchresultcard_tsx"
+    },
+    {
+      "label": "SearchResultCardProps",
+      "file_type": "code",
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source_location": "L11",
+      "community": 2,
+      "norm_label": "searchresultcardprops",
+      "id": "cards_searchresultcard_searchresultcardprops"
+    },
+    {
+      "label": "SearchResultCard()",
+      "file_type": "code",
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source_location": "L16",
+      "community": 3,
+      "norm_label": "searchresultcard()",
+      "id": "cards_searchresultcard_searchresultcard"
+    },
+    {
+      "label": "AvailabilityPreview.tsx",
+      "file_type": "code",
+      "source_file": "src/components/cards/AvailabilityPreview.tsx",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "availabilitypreview.tsx",
+      "id": "src_components_cards_availabilitypreview_tsx"
+    },
+    {
+      "label": "AvailabilityPreviewProps",
+      "file_type": "code",
+      "source_file": "src/components/cards/AvailabilityPreview.tsx",
+      "source_location": "L5",
+      "community": 2,
+      "norm_label": "availabilitypreviewprops",
+      "id": "cards_availabilitypreview_availabilitypreviewprops"
+    },
+    {
+      "label": "AvailabilityPreview()",
+      "file_type": "code",
+      "source_file": "src/components/cards/AvailabilityPreview.tsx",
+      "source_location": "L9",
+      "community": 2,
+      "norm_label": "availabilitypreview()",
+      "id": "cards_availabilitypreview_availabilitypreview"
+    },
+    {
+      "label": "Sidebar.tsx",
+      "file_type": "code",
+      "source_file": "src/components/professional/Sidebar.tsx",
+      "source_location": "L1",
+      "community": 6,
+      "norm_label": "sidebar.tsx",
+      "id": "src_components_professional_sidebar_tsx"
+    },
+    {
+      "label": "Sidebar()",
+      "file_type": "code",
+      "source_file": "src/components/professional/Sidebar.tsx",
+      "source_location": "L5",
+      "community": 6,
+      "norm_label": "sidebar()",
+      "id": "professional_sidebar_sidebar"
+    },
+    {
+      "label": "AppointmentList.tsx",
+      "file_type": "code",
+      "source_file": "src/components/professional/AppointmentList.tsx",
+      "source_location": "L1",
+      "community": 6,
+      "norm_label": "appointmentlist.tsx",
+      "id": "src_components_professional_appointmentlist_tsx"
+    },
+    {
+      "label": "AppointmentList()",
+      "file_type": "code",
+      "source_file": "src/components/professional/AppointmentList.tsx",
+      "source_location": "L5",
+      "community": 6,
+      "norm_label": "appointmentlist()",
+      "id": "professional_appointmentlist_appointmentlist"
+    },
+    {
+      "label": "CalendarView.tsx",
+      "file_type": "code",
+      "source_file": "src/components/professional/CalendarView.tsx",
+      "source_location": "L1",
+      "community": 6,
+      "norm_label": "calendarview.tsx",
+      "id": "src_components_professional_calendarview_tsx"
+    },
+    {
+      "label": "CalendarView()",
+      "file_type": "code",
+      "source_file": "src/components/professional/CalendarView.tsx",
+      "source_location": "L5",
+      "community": 6,
+      "norm_label": "calendarview()",
+      "id": "professional_calendarview_calendarview"
+    },
+    {
+      "label": "Button.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/Button.tsx",
+      "source_location": "L1",
+      "community": 0,
+      "norm_label": "button.tsx",
+      "id": "src_components_ui_button_tsx"
+    },
+    {
+      "label": "buttonVariants",
+      "file_type": "code",
+      "source_file": "src/components/ui/Button.tsx",
+      "source_location": "L5",
+      "community": 0,
+      "norm_label": "buttonvariants",
+      "id": "ui_button_buttonvariants"
+    },
+    {
+      "label": "ButtonProps",
+      "file_type": "code",
+      "source_file": "src/components/ui/Button.tsx",
+      "source_location": "L29",
+      "community": 0,
+      "norm_label": "buttonprops",
+      "id": "ui_button_buttonprops"
+    },
+    {
+      "label": "Button",
+      "file_type": "code",
+      "source_file": "src/components/ui/Button.tsx",
+      "source_location": "L33",
+      "community": 0,
+      "norm_label": "button",
+      "id": "ui_button_button"
+    },
+    {
+      "label": "Input.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/Input.tsx",
+      "source_location": "L1",
+      "community": 1,
+      "norm_label": "input.tsx",
+      "id": "src_components_ui_input_tsx"
+    },
+    {
+      "label": "InputProps",
+      "file_type": "code",
+      "source_file": "src/components/ui/Input.tsx",
+      "source_location": "L4",
+      "community": 1,
+      "norm_label": "inputprops",
+      "id": "ui_input_inputprops"
+    },
+    {
+      "label": "Input",
+      "file_type": "code",
+      "source_file": "src/components/ui/Input.tsx",
+      "source_location": "L9",
+      "community": 1,
+      "norm_label": "input",
+      "id": "ui_input_input"
+    },
+    {
+      "label": "SearchMap.tsx",
+      "file_type": "code",
+      "source_file": "src/components/map/SearchMap.tsx",
+      "source_location": "L1",
+      "community": 3,
+      "norm_label": "searchmap.tsx",
+      "id": "src_components_map_searchmap_tsx"
+    },
+    {
+      "label": "DefaultIcon",
+      "file_type": "code",
+      "source_file": "src/components/map/SearchMap.tsx",
+      "source_location": "L17",
+      "community": 3,
+      "norm_label": "defaulticon",
+      "id": "map_searchmap_defaulticon"
+    },
+    {
+      "label": "SearchMapProps",
+      "file_type": "code",
+      "source_file": "src/components/map/SearchMap.tsx",
+      "source_location": "L30",
+      "community": 3,
+      "norm_label": "searchmapprops",
+      "id": "map_searchmap_searchmapprops"
+    },
+    {
+      "label": "SearchMap()",
+      "file_type": "code",
+      "source_file": "src/components/map/SearchMap.tsx",
+      "source_location": "L35",
+      "community": 3,
+      "norm_label": "searchmap()",
+      "id": "map_searchmap_searchmap"
+    },
+    {
+      "label": "RegisterClinicForm.tsx",
+      "file_type": "code",
+      "source_file": "src/components/forms/RegisterClinicForm.tsx",
+      "source_location": "L1",
+      "community": 1,
+      "norm_label": "registerclinicform.tsx",
+      "id": "src_components_forms_registerclinicform_tsx"
+    },
+    {
+      "label": "RegisterClinicForm()",
+      "file_type": "code",
+      "source_file": "src/components/forms/RegisterClinicForm.tsx",
+      "source_location": "L7",
+      "community": 1,
+      "norm_label": "registerclinicform()",
+      "id": "forms_registerclinicform_registerclinicform"
+    },
+    {
+      "label": "RegisterPatientForm.tsx",
+      "file_type": "code",
+      "source_file": "src/components/forms/RegisterPatientForm.tsx",
+      "source_location": "L1",
+      "community": 1,
+      "norm_label": "registerpatientform.tsx",
+      "id": "src_components_forms_registerpatientform_tsx"
+    },
+    {
+      "label": "RegisterPatientForm()",
+      "file_type": "code",
+      "source_file": "src/components/forms/RegisterPatientForm.tsx",
+      "source_location": "L7",
+      "community": 1,
+      "norm_label": "registerpatientform()",
+      "id": "forms_registerpatientform_registerpatientform"
+    },
+    {
+      "label": "RegisterDoctorForm.tsx",
+      "file_type": "code",
+      "source_file": "src/components/forms/RegisterDoctorForm.tsx",
+      "source_location": "L1",
+      "community": 1,
+      "norm_label": "registerdoctorform.tsx",
+      "id": "src_components_forms_registerdoctorform_tsx"
+    },
+    {
+      "label": "RegisterDoctorForm()",
+      "file_type": "code",
+      "source_file": "src/components/forms/RegisterDoctorForm.tsx",
+      "source_location": "L7",
+      "community": 1,
+      "norm_label": "registerdoctorform()",
+      "id": "forms_registerdoctorform_registerdoctorform"
+    },
+    {
+      "label": "MoreInfoModal.tsx",
+      "file_type": "code",
+      "source_file": "src/components/profile/MoreInfoModal.tsx",
+      "source_location": "L1",
+      "community": 0,
+      "norm_label": "moreinfomodal.tsx",
+      "id": "src_components_profile_moreinfomodal_tsx"
+    },
+    {
+      "label": "MoreInfoModalProps",
+      "file_type": "code",
+      "source_file": "src/components/profile/MoreInfoModal.tsx",
+      "source_location": "L5",
+      "community": 0,
+      "norm_label": "moreinfomodalprops",
+      "id": "profile_moreinfomodal_moreinfomodalprops"
+    },
+    {
+      "label": "MoreInfoModal()",
+      "file_type": "code",
+      "source_file": "src/components/profile/MoreInfoModal.tsx",
+      "source_location": "L11",
+      "community": 0,
+      "norm_label": "moreinfomodal()",
+      "id": "profile_moreinfomodal_moreinfomodal"
+    },
+    {
+      "label": "GalleryGrid.tsx",
+      "file_type": "code",
+      "source_file": "src/components/profile/GalleryGrid.tsx",
+      "source_location": "L1",
+      "community": 0,
+      "norm_label": "gallerygrid.tsx",
+      "id": "src_components_profile_gallerygrid_tsx"
+    },
+    {
+      "label": "GalleryGrid()",
+      "file_type": "code",
+      "source_file": "src/components/profile/GalleryGrid.tsx",
+      "source_location": "L4",
+      "community": 0,
+      "norm_label": "gallerygrid()",
+      "id": "profile_gallerygrid_gallerygrid"
+    },
+    {
+      "label": "ReviewsSection.tsx",
+      "file_type": "code",
+      "source_file": "src/components/profile/ReviewsSection.tsx",
+      "source_location": "L1",
+      "community": 0,
+      "norm_label": "reviewssection.tsx",
+      "id": "src_components_profile_reviewssection_tsx"
+    },
+    {
+      "label": "ReviewsSection()",
+      "file_type": "code",
+      "source_file": "src/components/profile/ReviewsSection.tsx",
+      "source_location": "L5",
+      "community": 0,
+      "norm_label": "reviewssection()",
+      "id": "profile_reviewssection_reviewssection"
+    },
+    {
+      "label": "ServicesPricingCard.tsx",
+      "file_type": "code",
+      "source_file": "src/components/profile/ServicesPricingCard.tsx",
+      "source_location": "L1",
+      "community": 0,
+      "norm_label": "servicespricingcard.tsx",
+      "id": "src_components_profile_servicespricingcard_tsx"
+    },
+    {
+      "label": "ServicesPricingCard()",
+      "file_type": "code",
+      "source_file": "src/components/profile/ServicesPricingCard.tsx",
+      "source_location": "L6",
+      "community": 0,
+      "norm_label": "servicespricingcard()",
+      "id": "profile_servicespricingcard_servicespricingcard"
+    },
+    {
+      "label": "CareLocationsTabs.tsx",
+      "file_type": "code",
+      "source_file": "src/components/profile/CareLocationsTabs.tsx",
+      "source_location": "L1",
+      "community": 0,
+      "norm_label": "carelocationstabs.tsx",
+      "id": "src_components_profile_carelocationstabs_tsx"
+    },
+    {
+      "label": "CareLocationsTabs()",
+      "file_type": "code",
+      "source_file": "src/components/profile/CareLocationsTabs.tsx",
+      "source_location": "L6",
+      "community": 0,
+      "norm_label": "carelocationstabs()",
+      "id": "profile_carelocationstabs_carelocationstabs"
+    },
+    {
+      "label": "DoctorExperienceCard.tsx",
+      "file_type": "code",
+      "source_file": "src/components/profile/DoctorExperienceCard.tsx",
+      "source_location": "L1",
+      "community": 0,
+      "norm_label": "doctorexperiencecard.tsx",
+      "id": "src_components_profile_doctorexperiencecard_tsx"
+    },
+    {
+      "label": "DoctorExperienceCard()",
+      "file_type": "code",
+      "source_file": "src/components/profile/DoctorExperienceCard.tsx",
+      "source_location": "L7",
+      "community": 0,
+      "norm_label": "doctorexperiencecard()",
+      "id": "profile_doctorexperiencecard_doctorexperiencecard"
+    },
+    {
+      "label": "DoctorAvailabilityPanel.tsx",
+      "file_type": "code",
+      "source_file": "src/components/profile/DoctorAvailabilityPanel.tsx",
+      "source_location": "L1",
+      "community": 0,
+      "norm_label": "doctoravailabilitypanel.tsx",
+      "id": "src_components_profile_doctoravailabilitypanel_tsx"
+    },
+    {
+      "label": "DoctorAvailabilityPanel()",
+      "file_type": "code",
+      "source_file": "src/components/profile/DoctorAvailabilityPanel.tsx",
+      "source_location": "L6",
+      "community": 0,
+      "norm_label": "doctoravailabilitypanel()",
+      "id": "profile_doctoravailabilitypanel_doctoravailabilitypanel"
+    },
+    {
+      "label": "ProfileHero.tsx",
+      "file_type": "code",
+      "source_file": "src/components/profile/ProfileHero.tsx",
+      "source_location": "L1",
+      "community": 0,
+      "norm_label": "profilehero.tsx",
+      "id": "src_components_profile_profilehero_tsx"
+    },
+    {
+      "label": "ProfileHero()",
+      "file_type": "code",
+      "source_file": "src/components/profile/ProfileHero.tsx",
+      "source_location": "L6",
+      "community": 0,
+      "norm_label": "profilehero()",
+      "id": "profile_profilehero_profilehero"
+    },
+    {
+      "label": "Navbar.tsx",
+      "file_type": "code",
+      "source_file": "src/components/layout/Navbar.tsx",
+      "source_location": "L1",
+      "community": 5,
+      "norm_label": "navbar.tsx",
+      "id": "src_components_layout_navbar_tsx"
+    },
+    {
+      "label": "Navbar()",
+      "file_type": "code",
+      "source_file": "src/components/layout/Navbar.tsx",
+      "source_location": "L5",
+      "community": 5,
+      "norm_label": "navbar()",
+      "id": "layout_navbar_navbar"
+    },
+    {
+      "label": "doctor.ts",
+      "file_type": "code",
+      "source_file": "src/types/doctor.ts",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "doctor.ts",
+      "id": "src_types_doctor_ts"
+    },
+    {
+      "label": "Location",
+      "file_type": "code",
+      "source_file": "src/types/doctor.ts",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "location",
+      "id": "types_doctor_location"
+    },
+    {
+      "label": "AvailabilitySlot",
+      "file_type": "code",
+      "source_file": "src/types/doctor.ts",
+      "source_location": "L7",
+      "community": 2,
+      "norm_label": "availabilityslot",
+      "id": "types_doctor_availabilityslot"
+    },
+    {
+      "label": "ServiceDetail",
+      "file_type": "code",
+      "source_file": "src/types/doctor.ts",
+      "source_location": "L12",
+      "community": 2,
+      "norm_label": "servicedetail",
+      "id": "types_doctor_servicedetail"
+    },
+    {
+      "label": "CareLocation",
+      "file_type": "code",
+      "source_file": "src/types/doctor.ts",
+      "source_location": "L18",
+      "community": 2,
+      "norm_label": "carelocation",
+      "id": "types_doctor_carelocation"
+    },
+    {
+      "label": "Review",
+      "file_type": "code",
+      "source_file": "src/types/doctor.ts",
+      "source_location": "L25",
+      "community": 2,
+      "norm_label": "review",
+      "id": "types_doctor_review"
+    },
+    {
+      "label": "ScheduleDay",
+      "file_type": "code",
+      "source_file": "src/types/doctor.ts",
+      "source_location": "L32",
+      "community": 2,
+      "norm_label": "scheduleday",
+      "id": "types_doctor_scheduleday"
+    },
+    {
+      "label": "Doctor",
+      "file_type": "code",
+      "source_file": "src/types/doctor.ts",
+      "source_location": "L37",
+      "community": 0,
+      "norm_label": "doctor",
+      "id": "types_doctor_doctor"
+    },
+    {
+      "label": "Appointment",
+      "file_type": "code",
+      "source_file": "src/types/doctor.ts",
+      "source_location": "L73",
+      "community": 6,
+      "norm_label": "appointment",
+      "id": "types_doctor_appointment"
+    },
+    {
+      "label": "clinic.ts",
+      "file_type": "code",
+      "source_file": "src/types/clinic.ts",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "clinic.ts",
+      "id": "src_types_clinic_ts"
+    },
+    {
+      "label": "Clinic",
+      "file_type": "code",
+      "source_file": "src/types/clinic.ts",
+      "source_location": "L3",
+      "community": 2,
+      "norm_label": "clinic",
+      "id": "types_clinic_clinic"
+    },
+    {
+      "label": "locationStore.ts",
+      "file_type": "code",
+      "source_file": "src/store/locationStore.ts",
+      "source_location": "L1",
+      "community": 3,
+      "norm_label": "locationstore.ts",
+      "id": "src_store_locationstore_ts"
+    },
+    {
+      "label": "LocationState",
+      "file_type": "code",
+      "source_file": "src/store/locationStore.ts",
+      "source_location": "L3",
+      "community": 3,
+      "norm_label": "locationstate",
+      "id": "store_locationstore_locationstate"
+    },
+    {
+      "label": "useLocationStore",
+      "file_type": "code",
+      "source_file": "src/store/locationStore.ts",
+      "source_location": "L9",
+      "community": 3,
+      "norm_label": "uselocationstore",
+      "id": "store_locationstore_uselocationstore"
+    },
+    {
+      "label": "selectedProfileStore.ts",
+      "file_type": "code",
+      "source_file": "src/store/selectedProfileStore.ts",
+      "source_location": "L1",
+      "community": 3,
+      "norm_label": "selectedprofilestore.ts",
+      "id": "src_store_selectedprofilestore_ts"
+    },
+    {
+      "label": "SelectedProfileState",
+      "file_type": "code",
+      "source_file": "src/store/selectedProfileStore.ts",
+      "source_location": "L3",
+      "community": 3,
+      "norm_label": "selectedprofilestate",
+      "id": "store_selectedprofilestore_selectedprofilestate"
+    },
+    {
+      "label": "useSelectedProfileStore",
+      "file_type": "code",
+      "source_file": "src/store/selectedProfileStore.ts",
+      "source_location": "L12",
+      "community": 3,
+      "norm_label": "useselectedprofilestore",
+      "id": "store_selectedprofilestore_useselectedprofilestore"
+    },
+    {
+      "label": "authStore.ts",
+      "file_type": "code",
+      "source_file": "src/store/authStore.ts",
+      "source_location": "L1",
+      "community": 1,
+      "norm_label": "authstore.ts",
+      "id": "src_store_authstore_ts"
+    },
+    {
+      "label": "AuthState",
+      "file_type": "code",
+      "source_file": "src/store/authStore.ts",
+      "source_location": "L3",
+      "community": 1,
+      "norm_label": "authstate",
+      "id": "store_authstore_authstate"
+    },
+    {
+      "label": "useAuthStore",
+      "file_type": "code",
+      "source_file": "src/store/authStore.ts",
+      "source_location": "L10",
+      "community": 1,
+      "norm_label": "useauthstore",
+      "id": "store_authstore_useauthstore"
+    },
+    {
+      "label": "Tailwind CSS Configuration",
+      "file_type": "code",
+      "source_file": "tailwind.config.js",
+      "community": 19,
+      "norm_label": "tailwind css configuration",
+      "id": "tailwind_config"
+    },
+    {
+      "label": "Vite Configuration",
+      "file_type": "code",
+      "source_file": "vite.config.ts",
+      "community": 20,
+      "norm_label": "vite configuration",
+      "id": "vite_config"
+    },
+    {
+      "label": "ESLint Configuration",
+      "file_type": "code",
+      "source_file": "eslint.config.js",
+      "community": 21,
+      "norm_label": "eslint configuration",
+      "id": "eslint_config"
+    },
+    {
+      "label": "Application Entry Point",
+      "file_type": "code",
+      "source_file": "src/main.tsx",
+      "community": 4,
+      "norm_label": "application entry point",
+      "id": "main_entry"
+    },
+    {
+      "label": "Root App Component",
+      "file_type": "code",
+      "source_file": "src/App.tsx",
+      "community": 4,
+      "norm_label": "root app component",
+      "id": "app_component"
+    },
+    {
+      "label": "Classname Utility",
+      "file_type": "code",
+      "source_file": "src/utils/cn.ts",
+      "community": 4,
+      "norm_label": "classname utility",
+      "id": "cn_util"
+    },
+    {
+      "label": "Mock Data Store",
+      "file_type": "code",
+      "source_file": "src/utils/mockData.ts",
+      "community": 4,
+      "norm_label": "mock data store",
+      "id": "mock_data"
+    },
+    {
+      "label": "Clinic Registration Page",
+      "file_type": "code",
+      "source_file": "src/pages/RegisterClinicPage.tsx",
+      "community": 22,
+      "norm_label": "clinic registration page",
+      "id": "register_clinic_page"
+    },
+    {
+      "label": "Professional Dashboard Page",
+      "file_type": "code",
+      "source_file": "src/pages/ProfessionalPage.tsx",
+      "community": 4,
+      "norm_label": "professional dashboard page",
+      "id": "professional_page"
+    },
+    {
+      "label": "Login Page",
+      "file_type": "code",
+      "source_file": "src/pages/LoginPage.tsx",
+      "community": 4,
+      "norm_label": "login page",
+      "id": "login_page"
+    },
+    {
+      "label": "Search Results Page",
+      "file_type": "code",
+      "source_file": "src/pages/SearchPage.tsx",
+      "community": 4,
+      "norm_label": "search results page",
+      "id": "search_page"
+    },
+    {
+      "label": "Doctor/Clinic Profile Page",
+      "file_type": "code",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "community": 4,
+      "norm_label": "doctor/clinic profile page",
+      "id": "profile_page"
+    },
+    {
+      "label": "Registration Entry Page",
+      "file_type": "code",
+      "source_file": "src/pages/RegisterPage.tsx",
+      "community": 4,
+      "norm_label": "registration entry page",
+      "id": "register_page"
+    },
+    {
+      "label": "Patient Registration Page",
+      "file_type": "code",
+      "source_file": "src/pages/RegisterPatientPage.tsx",
+      "community": 23,
+      "norm_label": "patient registration page",
+      "id": "register_patient_page"
+    },
+    {
+      "label": "Doctor Registration Page",
+      "file_type": "code",
+      "source_file": "src/pages/RegisterDoctorPage.tsx",
+      "community": 24,
+      "norm_label": "doctor registration page",
+      "id": "register_doctor_page"
+    },
+    {
+      "label": "Home Page",
+      "file_type": "code",
+      "source_file": "src/pages/HomePage.tsx",
+      "community": 4,
+      "norm_label": "home page",
+      "id": "home_page"
+    },
+    {
+      "label": "Account Type Selection Card",
+      "file_type": "code",
+      "source_file": "src/components/cards/AccountTypeCard.tsx",
+      "community": 4,
+      "norm_label": "account type selection card",
+      "id": "account_type_card"
+    },
+    {
+      "label": "Search Result Card",
+      "file_type": "code",
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "community": 4,
+      "norm_label": "search result card",
+      "id": "search_result_card"
+    },
+    {
+      "label": "Availability Slots Preview",
+      "file_type": "code",
+      "source_file": "src/components/cards/AvailabilityPreview.tsx",
+      "community": 4,
+      "norm_label": "availability slots preview",
+      "id": "availability_preview"
+    },
+    {
+      "label": "RegisterClinicForm.handleSubmit",
+      "file_type": "code",
+      "source_file": "src/components/forms/RegisterClinicForm.tsx",
+      "community": 8,
+      "norm_label": "registerclinicform.handlesubmit",
+      "id": "registerclinicform_handlesubmit"
+    },
+    {
+      "label": "RegisterPatientForm.handleSubmit",
+      "file_type": "code",
+      "source_file": "src/components/forms/RegisterPatientForm.tsx",
+      "community": 8,
+      "norm_label": "registerpatientform.handlesubmit",
+      "id": "registerpatientform_handlesubmit"
+    },
+    {
+      "label": "RegisterDoctorForm.handleSubmit",
+      "file_type": "code",
+      "source_file": "src/components/forms/RegisterDoctorForm.tsx",
+      "community": 8,
+      "norm_label": "registerdoctorform.handlesubmit",
+      "id": "registerdoctorform_handlesubmit"
+    },
+    {
+      "label": "authStore.login",
+      "file_type": "code",
+      "source_file": "src/store/authStore.ts",
+      "community": 8,
+      "norm_label": "authstore.login",
+      "id": "authstore_login"
+    },
+    {
+      "label": "SearchMap.calculateRoute",
+      "file_type": "code",
+      "source_file": "src/components/map/SearchMap.tsx",
+      "community": 12,
+      "norm_label": "searchmap.calculateroute",
+      "id": "searchmap_calculateroute"
+    },
+    {
+      "label": "SearchMap.findMe",
+      "file_type": "code",
+      "source_file": "src/components/map/SearchMap.tsx",
+      "community": 9,
+      "norm_label": "searchmap.findme",
+      "id": "searchmap_findme"
+    },
+    {
+      "label": "locationStore.setUserCoords",
+      "file_type": "code",
+      "source_file": "src/store/locationStore.ts",
+      "community": 9,
+      "norm_label": "locationstore.setusercoords",
+      "id": "locationstore_setusercoords"
+    },
+    {
+      "label": "DoctorExperienceCard.setIsModalOpen",
+      "file_type": "code",
+      "source_file": "src/components/profile/DoctorExperienceCard.tsx",
+      "community": 13,
+      "norm_label": "doctorexperiencecard.setismodalopen",
+      "id": "doctorexperiencecard_setismodalopen"
+    },
+    {
+      "label": "CareLocationsTabs.setActiveTab",
+      "file_type": "code",
+      "source_file": "src/components/profile/CareLocationsTabs.tsx",
+      "community": 14,
+      "norm_label": "carelocationstabs.setactivetab",
+      "id": "carelocationstabs_setactivetab"
+    },
+    {
+      "label": "MediFind Design Pattern",
+      "file_type": "rationale",
+      "source_file": "src/components/ui/Button.tsx",
+      "rationale": "Consistent UI patterns using custom Button and Input components with specific color palette (#5A9BD4, #1C365C, #E6CBB8).",
+      "community": 25,
+      "norm_label": "medifind design pattern",
+      "id": "medifind_design_pattern"
+    },
+    {
+      "label": "useSelectedProfileStore",
+      "file_type": "code",
+      "source_file": "src/store/selectedProfileStore.ts",
+      "community": 10,
+      "norm_label": "useselectedprofilestore",
+      "id": "selectedprofilestore_useselectedprofilestore"
+    },
+    {
+      "label": "SelectedProfileState",
+      "file_type": "code",
+      "source_file": "src/store/selectedProfileStore.ts",
+      "community": 10,
+      "norm_label": "selectedprofilestate",
+      "id": "selectedprofilestore_selectedprofilestate"
+    },
+    {
+      "label": "Clinic",
+      "file_type": "code",
+      "source_file": "src/types/clinic.ts",
+      "community": 7,
+      "norm_label": "clinic",
+      "id": "clinic_clinic"
+    },
+    {
+      "label": "Location",
+      "file_type": "code",
+      "source_file": "src/types/doctor.ts",
+      "community": 7,
+      "norm_label": "location",
+      "id": "doctor_location"
+    },
+    {
+      "label": "AvailabilitySlot",
+      "file_type": "code",
+      "source_file": "src/types/doctor.ts",
+      "community": 7,
+      "norm_label": "availabilityslot",
+      "id": "doctor_availabilityslot"
+    },
+    {
+      "label": "ServiceDetail",
+      "file_type": "code",
+      "source_file": "src/types/doctor.ts",
+      "community": 7,
+      "norm_label": "servicedetail",
+      "id": "doctor_servicedetail"
+    },
+    {
+      "label": "CareLocation",
+      "file_type": "code",
+      "source_file": "src/types/doctor.ts",
+      "community": 7,
+      "norm_label": "carelocation",
+      "id": "doctor_carelocation"
+    },
+    {
+      "label": "Review",
+      "file_type": "code",
+      "source_file": "src/types/doctor.ts",
+      "community": 7,
+      "norm_label": "review",
+      "id": "doctor_review"
+    },
+    {
+      "label": "ScheduleDay",
+      "file_type": "code",
+      "source_file": "src/types/doctor.ts",
+      "community": 7,
+      "norm_label": "scheduleday",
+      "id": "doctor_scheduleday"
+    },
+    {
+      "label": "Doctor",
+      "file_type": "code",
+      "source_file": "src/types/doctor.ts",
+      "community": 7,
+      "norm_label": "doctor",
+      "id": "doctor_doctor"
+    },
+    {
+      "label": "Appointment",
+      "file_type": "code",
+      "source_file": "src/types/doctor.ts",
+      "community": 7,
+      "norm_label": "appointment",
+      "id": "doctor_appointment"
+    },
+    {
+      "label": "MediFront README",
+      "file_type": "document",
+      "source_file": "README.md",
+      "community": 11,
+      "norm_label": "medifront readme",
+      "id": "readme_medifront"
+    },
+    {
+      "label": "React Compiler Omission Rationale",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "community": 11,
+      "norm_label": "react compiler omission rationale",
+      "id": "readme_react_compiler_rationale"
+    },
+    {
+      "label": "MediFront Package config",
+      "file_type": "code",
+      "source_file": "package.json",
+      "community": 26,
+      "norm_label": "medifront package config",
+      "id": "package_medifront"
+    },
+    {
+      "label": "Homepage Screenshot",
+      "file_type": "image",
+      "source_file": "src/assets/homepage.png",
+      "community": 27,
+      "norm_label": "homepage screenshot",
+      "id": "homepage_image"
+    },
+    {
+      "label": "Hero Banner Image",
+      "file_type": "image",
+      "source_file": "src/assets/hero.png",
+      "community": 28,
+      "norm_label": "hero banner image",
+      "id": "hero_image"
+    },
+    {
+      "label": "Doctor Profile Image",
+      "file_type": "image",
+      "source_file": "src/assets/doctor.png",
+      "community": 29,
+      "norm_label": "doctor profile image",
+      "id": "doctor_image"
+    },
+    {
+      "label": "Homepage Background Composition",
+      "file_type": "image",
+      "source_file": "src/assets/homePageOnBackground.png",
+      "community": 30,
+      "norm_label": "homepage background composition",
+      "id": "homepageonbackground_image"
+    },
+    {
+      "label": "Vite Logo",
+      "file_type": "image",
+      "source_file": "src/assets/vite.svg",
+      "community": 31,
+      "norm_label": "vite logo",
+      "id": "vite_image"
+    },
+    {
+      "label": "React Logo",
+      "file_type": "image",
+      "source_file": "src/assets/react.svg",
+      "community": 32,
+      "norm_label": "react logo",
+      "id": "react_image"
+    },
+    {
+      "label": "Website Favicon",
+      "file_type": "image",
+      "source_file": "public/favicon.svg",
+      "community": 33,
+      "norm_label": "website favicon",
+      "id": "favicon_image"
+    },
+    {
+      "label": "SVG Icon Sprite Sheet",
+      "file_type": "image",
+      "source_file": "public/icons.svg",
+      "community": 34,
+      "norm_label": "svg icon sprite sheet",
+      "id": "icons_image"
+    }
+  ],
+  "links": [
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_main_tsx",
+      "target": "src_app_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_components_layout_navbar_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_tsx",
+      "target": "layout_navbar_navbar"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_pages_homepage_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_pages_searchpage_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_pages_loginpage_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_pages_registerpage_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_pages_registerpatientpage_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_pages_registerdoctorpage_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_pages_registerclinicpage_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_pages_profilepage_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_pages_professionalpage_tsx"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_app_app"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/cn.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_utils_cn_ts",
+      "target": "utils_cn_cn"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/Button.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_ui_button_tsx",
+      "target": "src_utils_cn_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/Input.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_ui_input_tsx",
+      "target": "src_utils_cn_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/Button.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_ui_button_tsx",
+      "target": "utils_cn_cn"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/Input.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_ui_input_tsx",
+      "target": "utils_cn_cn"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/mockData.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_utils_mockdata_ts",
+      "target": "src_types_doctor_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/mockData.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_utils_mockdata_ts",
+      "target": "types_doctor_doctor"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/mockData.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_utils_mockdata_ts",
+      "target": "src_types_clinic_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/mockData.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_utils_mockdata_ts",
+      "target": "types_clinic_clinic"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/mockData.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_utils_mockdata_ts",
+      "target": "utils_mockdata_mockdoctors"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/mockData.ts",
+      "source_location": "L116",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_utils_mockdata_ts",
+      "target": "utils_mockdata_mockclinics"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfessionalPage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_professionalpage_tsx",
+      "target": "src_utils_mockdata_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/SearchPage.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_searchpage_tsx",
+      "target": "src_utils_mockdata_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "src_utils_mockdata_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfessionalPage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_professionalpage_tsx",
+      "target": "utils_mockdata_mockdoctors"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/SearchPage.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_searchpage_tsx",
+      "target": "utils_mockdata_mockdoctors"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "utils_mockdata_mockdoctors"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "utils_mockdata_mockclinics"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/RegisterClinicPage.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_registerclinicpage_tsx",
+      "target": "src_components_forms_registerclinicform_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/RegisterClinicPage.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_registerclinicpage_tsx",
+      "target": "forms_registerclinicform_registerclinicform"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/RegisterClinicPage.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_registerclinicpage_tsx",
+      "target": "pages_registerclinicpage_registerclinicpage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfessionalPage.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_professionalpage_tsx",
+      "target": "src_components_professional_sidebar_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfessionalPage.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_professionalpage_tsx",
+      "target": "professional_sidebar_sidebar"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfessionalPage.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_professionalpage_tsx",
+      "target": "src_components_professional_appointmentlist_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfessionalPage.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_professionalpage_tsx",
+      "target": "professional_appointmentlist_appointmentlist"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfessionalPage.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_professionalpage_tsx",
+      "target": "src_components_professional_calendarview_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfessionalPage.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_professionalpage_tsx",
+      "target": "professional_calendarview_calendarview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfessionalPage.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_professionalpage_tsx",
+      "target": "pages_professionalpage_professionalpage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/LoginPage.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_loginpage_tsx",
+      "target": "src_store_authstore_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/LoginPage.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_loginpage_tsx",
+      "target": "store_authstore_useauthstore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/LoginPage.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_loginpage_tsx",
+      "target": "src_components_ui_button_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/LoginPage.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_loginpage_tsx",
+      "target": "ui_button_button"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/LoginPage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_loginpage_tsx",
+      "target": "src_components_ui_input_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/LoginPage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_loginpage_tsx",
+      "target": "ui_input_input"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/LoginPage.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_loginpage_tsx",
+      "target": "pages_loginpage_loginpage"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/LoginPage.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "pages_loginpage_loginpage",
+      "target": "store_authstore_useauthstore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/SearchPage.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_searchpage_tsx",
+      "target": "src_components_cards_searchresultcard_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/SearchPage.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_searchpage_tsx",
+      "target": "cards_searchresultcard_searchresultcard"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/SearchPage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_searchpage_tsx",
+      "target": "src_components_map_searchmap_tsx"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/SearchPage.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_searchpage_tsx",
+      "target": "pages_searchpage_searchpage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "src_store_authstore_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "store_authstore_useauthstore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "src_store_selectedprofilestore_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "store_selectedprofilestore_useselectedprofilestore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "src_components_ui_button_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "ui_button_button"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "src_types_doctor_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "types_doctor_doctor"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "src_types_clinic_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "types_clinic_clinic"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "src_components_profile_profilehero_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "profile_profilehero_profilehero"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "src_components_profile_doctorexperiencecard_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "profile_doctorexperiencecard_doctorexperiencecard"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "src_components_profile_servicespricingcard_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "profile_servicespricingcard_servicespricingcard"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "src_components_profile_carelocationstabs_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "profile_carelocationstabs_carelocationstabs"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "src_components_profile_gallerygrid_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "profile_gallerygrid_gallerygrid"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "src_components_profile_reviewssection_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "profile_reviewssection_reviewssection"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "src_components_profile_doctoravailabilitypanel_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "profile_doctoravailabilitypanel_doctoravailabilitypanel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_profilepage_tsx",
+      "target": "pages_profilepage_profilepage"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "pages_profilepage_profilepage",
+      "target": "store_authstore_useauthstore"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "pages_profilepage_profilepage",
+      "target": "store_selectedprofilestore_useselectedprofilestore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/RegisterPage.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_registerpage_tsx",
+      "target": "src_components_cards_accounttypecard_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/RegisterPage.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_registerpage_tsx",
+      "target": "cards_accounttypecard_accounttypecard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/RegisterPage.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_registerpage_tsx",
+      "target": "pages_registerpage_registerpage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/RegisterPatientPage.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_registerpatientpage_tsx",
+      "target": "src_components_forms_registerpatientform_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/RegisterPatientPage.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_registerpatientpage_tsx",
+      "target": "forms_registerpatientform_registerpatientform"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/RegisterPatientPage.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_registerpatientpage_tsx",
+      "target": "pages_registerpatientpage_registerpatientpage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/RegisterDoctorPage.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_registerdoctorpage_tsx",
+      "target": "src_components_forms_registerdoctorform_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/RegisterDoctorPage.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_registerdoctorpage_tsx",
+      "target": "forms_registerdoctorform_registerdoctorform"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/RegisterDoctorPage.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_registerdoctorpage_tsx",
+      "target": "pages_registerdoctorpage_registerdoctorpage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "src_components_ui_button_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "ui_button_button"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "src_components_ui_input_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "ui_input_input"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "src_store_locationstore_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "store_locationstore_uselocationstore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "pages_homepage_homepage"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "pages_homepage_homepage",
+      "target": "store_locationstore_uselocationstore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/AccountTypeCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_accounttypecard_tsx",
+      "target": "cards_accounttypecard_accounttypecardprops"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/AccountTypeCard.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_accounttypecard_tsx",
+      "target": "cards_accounttypecard_accounttypecard"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_searchresultcard_tsx",
+      "target": "src_types_doctor_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_searchresultcard_tsx",
+      "target": "types_doctor_doctor"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_searchresultcard_tsx",
+      "target": "src_types_clinic_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_searchresultcard_tsx",
+      "target": "types_clinic_clinic"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_searchresultcard_tsx",
+      "target": "src_store_selectedprofilestore_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_searchresultcard_tsx",
+      "target": "store_selectedprofilestore_useselectedprofilestore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_searchresultcard_tsx",
+      "target": "src_store_authstore_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_searchresultcard_tsx",
+      "target": "store_authstore_useauthstore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_searchresultcard_tsx",
+      "target": "src_components_ui_button_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_searchresultcard_tsx",
+      "target": "ui_button_button"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_searchresultcard_tsx",
+      "target": "src_components_cards_availabilitypreview_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_searchresultcard_tsx",
+      "target": "cards_availabilitypreview_availabilitypreview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_searchresultcard_tsx",
+      "target": "cards_searchresultcard_searchresultcardprops"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_searchresultcard_tsx",
+      "target": "cards_searchresultcard_searchresultcard"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "cards_searchresultcard_searchresultcard",
+      "target": "store_selectedprofilestore_useselectedprofilestore"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "cards_searchresultcard_searchresultcard",
+      "target": "store_authstore_useauthstore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/AvailabilityPreview.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_availabilitypreview_tsx",
+      "target": "src_types_doctor_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/AvailabilityPreview.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_availabilitypreview_tsx",
+      "target": "types_doctor_availabilityslot"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/AvailabilityPreview.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_availabilitypreview_tsx",
+      "target": "cards_availabilitypreview_availabilitypreviewprops"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/cards/AvailabilityPreview.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_cards_availabilitypreview_tsx",
+      "target": "cards_availabilitypreview_availabilitypreview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/professional/Sidebar.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_professional_sidebar_tsx",
+      "target": "professional_sidebar_sidebar"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/professional/AppointmentList.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_professional_appointmentlist_tsx",
+      "target": "src_types_doctor_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/professional/AppointmentList.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_professional_appointmentlist_tsx",
+      "target": "types_doctor_appointment"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/professional/AppointmentList.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_professional_appointmentlist_tsx",
+      "target": "professional_appointmentlist_appointmentlist"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/professional/CalendarView.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_professional_calendarview_tsx",
+      "target": "src_components_ui_button_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/professional/CalendarView.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_professional_calendarview_tsx",
+      "target": "ui_button_button"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/professional/CalendarView.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_professional_calendarview_tsx",
+      "target": "professional_calendarview_calendarview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/Button.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_ui_button_tsx",
+      "target": "ui_button_buttonvariants"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/Button.tsx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_ui_button_tsx",
+      "target": "ui_button_buttonprops"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/Button.tsx",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_ui_button_tsx",
+      "target": "ui_button_button"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/map/SearchMap.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_map_searchmap_tsx",
+      "target": "src_components_ui_button_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterClinicForm.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerclinicform_tsx",
+      "target": "src_components_ui_button_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterPatientForm.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerpatientform_tsx",
+      "target": "src_components_ui_button_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterDoctorForm.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerdoctorform_tsx",
+      "target": "src_components_ui_button_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/ServicesPricingCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_servicespricingcard_tsx",
+      "target": "src_components_ui_button_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/CareLocationsTabs.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_carelocationstabs_tsx",
+      "target": "src_components_ui_button_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/DoctorExperienceCard.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_doctorexperiencecard_tsx",
+      "target": "src_components_ui_button_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/DoctorAvailabilityPanel.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_doctoravailabilitypanel_tsx",
+      "target": "src_components_ui_button_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/ProfileHero.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_profilehero_tsx",
+      "target": "src_components_ui_button_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Navbar.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_layout_navbar_tsx",
+      "target": "src_components_ui_button_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/map/SearchMap.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_map_searchmap_tsx",
+      "target": "ui_button_button"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterClinicForm.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerclinicform_tsx",
+      "target": "ui_button_button"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterPatientForm.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerpatientform_tsx",
+      "target": "ui_button_button"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterDoctorForm.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerdoctorform_tsx",
+      "target": "ui_button_button"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/ServicesPricingCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_servicespricingcard_tsx",
+      "target": "ui_button_button"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/CareLocationsTabs.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_carelocationstabs_tsx",
+      "target": "ui_button_button"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/DoctorExperienceCard.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_doctorexperiencecard_tsx",
+      "target": "ui_button_button"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/DoctorAvailabilityPanel.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_doctoravailabilitypanel_tsx",
+      "target": "ui_button_button"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/ProfileHero.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_profilehero_tsx",
+      "target": "ui_button_button"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Navbar.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_layout_navbar_tsx",
+      "target": "ui_button_button"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/Input.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_ui_input_tsx",
+      "target": "ui_input_inputprops"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/Input.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_ui_input_tsx",
+      "target": "ui_input_input"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterClinicForm.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerclinicform_tsx",
+      "target": "src_components_ui_input_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterPatientForm.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerpatientform_tsx",
+      "target": "src_components_ui_input_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterDoctorForm.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerdoctorform_tsx",
+      "target": "src_components_ui_input_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterClinicForm.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerclinicform_tsx",
+      "target": "ui_input_input"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterPatientForm.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerpatientform_tsx",
+      "target": "ui_input_input"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterDoctorForm.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerdoctorform_tsx",
+      "target": "ui_input_input"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/map/SearchMap.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_map_searchmap_tsx",
+      "target": "src_types_doctor_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/map/SearchMap.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_map_searchmap_tsx",
+      "target": "types_doctor_doctor"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/map/SearchMap.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_map_searchmap_tsx",
+      "target": "src_store_locationstore_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/map/SearchMap.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_map_searchmap_tsx",
+      "target": "store_locationstore_uselocationstore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/map/SearchMap.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_map_searchmap_tsx",
+      "target": "src_store_selectedprofilestore_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/map/SearchMap.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_map_searchmap_tsx",
+      "target": "store_selectedprofilestore_useselectedprofilestore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/map/SearchMap.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_map_searchmap_tsx",
+      "target": "map_searchmap_defaulticon"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/map/SearchMap.tsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_map_searchmap_tsx",
+      "target": "map_searchmap_searchmapprops"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/map/SearchMap.tsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_map_searchmap_tsx",
+      "target": "map_searchmap_searchmap"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/map/SearchMap.tsx",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "map_searchmap_searchmap",
+      "target": "store_locationstore_uselocationstore"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/map/SearchMap.tsx",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "map_searchmap_searchmap",
+      "target": "store_selectedprofilestore_useselectedprofilestore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterClinicForm.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerclinicform_tsx",
+      "target": "src_store_authstore_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterClinicForm.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerclinicform_tsx",
+      "target": "store_authstore_useauthstore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterClinicForm.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerclinicform_tsx",
+      "target": "forms_registerclinicform_registerclinicform"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/forms/RegisterClinicForm.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "forms_registerclinicform_registerclinicform",
+      "target": "store_authstore_useauthstore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterPatientForm.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerpatientform_tsx",
+      "target": "src_store_authstore_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterPatientForm.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerpatientform_tsx",
+      "target": "store_authstore_useauthstore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterPatientForm.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerpatientform_tsx",
+      "target": "forms_registerpatientform_registerpatientform"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/forms/RegisterPatientForm.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "forms_registerpatientform_registerpatientform",
+      "target": "store_authstore_useauthstore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterDoctorForm.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerdoctorform_tsx",
+      "target": "src_store_authstore_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterDoctorForm.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerdoctorform_tsx",
+      "target": "store_authstore_useauthstore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/forms/RegisterDoctorForm.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_forms_registerdoctorform_tsx",
+      "target": "forms_registerdoctorform_registerdoctorform"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/forms/RegisterDoctorForm.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "forms_registerdoctorform_registerdoctorform",
+      "target": "store_authstore_useauthstore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/MoreInfoModal.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_moreinfomodal_tsx",
+      "target": "src_types_doctor_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/MoreInfoModal.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_moreinfomodal_tsx",
+      "target": "types_doctor_doctor"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/MoreInfoModal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_moreinfomodal_tsx",
+      "target": "profile_moreinfomodal_moreinfomodalprops"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/MoreInfoModal.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_moreinfomodal_tsx",
+      "target": "profile_moreinfomodal_moreinfomodal"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/DoctorExperienceCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_doctorexperiencecard_tsx",
+      "target": "src_components_profile_moreinfomodal_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/DoctorExperienceCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_doctorexperiencecard_tsx",
+      "target": "profile_moreinfomodal_moreinfomodal"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/GalleryGrid.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_gallerygrid_tsx",
+      "target": "src_types_doctor_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/GalleryGrid.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_gallerygrid_tsx",
+      "target": "types_doctor_doctor"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/GalleryGrid.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_gallerygrid_tsx",
+      "target": "profile_gallerygrid_gallerygrid"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/ReviewsSection.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_reviewssection_tsx",
+      "target": "src_types_doctor_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/ReviewsSection.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_reviewssection_tsx",
+      "target": "types_doctor_doctor"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/ReviewsSection.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_reviewssection_tsx",
+      "target": "profile_reviewssection_reviewssection"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/ServicesPricingCard.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_servicespricingcard_tsx",
+      "target": "src_types_doctor_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/ServicesPricingCard.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_servicespricingcard_tsx",
+      "target": "types_doctor_doctor"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/ServicesPricingCard.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_servicespricingcard_tsx",
+      "target": "profile_servicespricingcard_servicespricingcard"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/CareLocationsTabs.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_carelocationstabs_tsx",
+      "target": "src_types_doctor_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/CareLocationsTabs.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_carelocationstabs_tsx",
+      "target": "types_doctor_doctor"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/CareLocationsTabs.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_carelocationstabs_tsx",
+      "target": "profile_carelocationstabs_carelocationstabs"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/DoctorExperienceCard.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_doctorexperiencecard_tsx",
+      "target": "src_types_doctor_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/DoctorExperienceCard.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_doctorexperiencecard_tsx",
+      "target": "types_doctor_doctor"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/DoctorExperienceCard.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_doctorexperiencecard_tsx",
+      "target": "profile_doctorexperiencecard_doctorexperiencecard"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/DoctorAvailabilityPanel.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_doctoravailabilitypanel_tsx",
+      "target": "src_types_doctor_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/DoctorAvailabilityPanel.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_doctoravailabilitypanel_tsx",
+      "target": "types_doctor_doctor"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/DoctorAvailabilityPanel.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_doctoravailabilitypanel_tsx",
+      "target": "profile_doctoravailabilitypanel_doctoravailabilitypanel"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/ProfileHero.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_profilehero_tsx",
+      "target": "src_types_doctor_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/ProfileHero.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_profilehero_tsx",
+      "target": "types_doctor_doctor"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/profile/ProfileHero.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_profile_profilehero_tsx",
+      "target": "profile_profilehero_profilehero"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Navbar.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_layout_navbar_tsx",
+      "target": "layout_navbar_navbar"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/doctor.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_types_doctor_ts",
+      "target": "types_doctor_location"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/doctor.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_types_doctor_ts",
+      "target": "types_doctor_availabilityslot"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/doctor.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_types_doctor_ts",
+      "target": "types_doctor_servicedetail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/doctor.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_types_doctor_ts",
+      "target": "types_doctor_carelocation"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/doctor.ts",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_types_doctor_ts",
+      "target": "types_doctor_review"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/doctor.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_types_doctor_ts",
+      "target": "types_doctor_scheduleday"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/doctor.ts",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_types_doctor_ts",
+      "target": "types_doctor_doctor"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/doctor.ts",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_types_doctor_ts",
+      "target": "types_doctor_appointment"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/clinic.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_types_clinic_ts",
+      "target": "src_types_doctor_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/clinic.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_types_clinic_ts",
+      "target": "types_doctor_location"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/clinic.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_types_clinic_ts",
+      "target": "types_doctor_availabilityslot"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/clinic.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_types_clinic_ts",
+      "target": "types_clinic_clinic"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/locationStore.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_store_locationstore_ts",
+      "target": "store_locationstore_locationstate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/locationStore.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_store_locationstore_ts",
+      "target": "store_locationstore_uselocationstore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/selectedProfileStore.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_store_selectedprofilestore_ts",
+      "target": "store_selectedprofilestore_selectedprofilestate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/selectedProfileStore.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_store_selectedprofilestore_ts",
+      "target": "store_selectedprofilestore_useselectedprofilestore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/authStore.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_store_authstore_ts",
+      "target": "store_authstore_authstate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/authStore.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_store_authstore_ts",
+      "target": "store_authstore_useauthstore"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/main.tsx",
+      "source": "main_entry",
+      "target": "app_component"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.tsx",
+      "source": "app_component",
+      "target": "home_page"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.tsx",
+      "source": "app_component",
+      "target": "search_page"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.tsx",
+      "source": "app_component",
+      "target": "login_page"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.tsx",
+      "source": "app_component",
+      "target": "register_page"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.tsx",
+      "source": "app_component",
+      "target": "profile_page"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.tsx",
+      "source": "app_component",
+      "target": "professional_page"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/pages/HomePage.tsx",
+      "source": "home_page",
+      "target": "cn_util"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/SearchPage.tsx",
+      "source": "search_page",
+      "target": "mock_data"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/ProfessionalPage.tsx",
+      "source": "professional_page",
+      "target": "mock_data"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/ProfilePage.tsx",
+      "source": "profile_page",
+      "target": "mock_data"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/SearchPage.tsx",
+      "source": "search_page",
+      "target": "search_result_card"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/RegisterPage.tsx",
+      "source": "register_page",
+      "target": "account_type_card"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/cards/SearchResultCard.tsx",
+      "source": "search_result_card",
+      "target": "availability_preview"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/forms/RegisterClinicForm.tsx",
+      "source": "registerclinicform_handlesubmit",
+      "target": "authstore_login"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/forms/RegisterPatientForm.tsx",
+      "source": "registerpatientform_handlesubmit",
+      "target": "authstore_login"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/forms/RegisterDoctorForm.tsx",
+      "source": "registerdoctorform_handlesubmit",
+      "target": "authstore_login"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/map/SearchMap.tsx",
+      "source": "searchmap_calculateroute",
+      "target": "searchmap_calculateroute"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/map/SearchMap.tsx",
+      "source": "searchmap_findme",
+      "target": "locationstore_setusercoords"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/profile/DoctorExperienceCard.tsx",
+      "source": "doctorexperiencecard_setismodalopen",
+      "target": "doctorexperiencecard_setismodalopen"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/profile/CareLocationsTabs.tsx",
+      "source": "carelocationstabs_setactivetab",
+      "target": "carelocationstabs_setactivetab"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/store/selectedProfileStore.ts",
+      "source": "selectedprofilestore_useselectedprofilestore",
+      "target": "selectedprofilestore_selectedprofilestate"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/types/clinic.ts",
+      "source": "clinic_clinic",
+      "target": "doctor_location"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/types/clinic.ts",
+      "source": "clinic_clinic",
+      "target": "doctor_availabilityslot"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/types/doctor.ts",
+      "source": "doctor_doctor",
+      "target": "doctor_location"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/types/doctor.ts",
+      "source": "doctor_doctor",
+      "target": "doctor_availabilityslot"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/types/doctor.ts",
+      "source": "doctor_doctor",
+      "target": "doctor_servicedetail"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/types/doctor.ts",
+      "source": "doctor_doctor",
+      "target": "doctor_carelocation"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/types/doctor.ts",
+      "source": "doctor_doctor",
+      "target": "doctor_review"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/types/doctor.ts",
+      "source": "doctor_doctor",
+      "target": "doctor_scheduleday"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/types/doctor.ts",
+      "source": "doctor_doctor",
+      "target": "doctor_appointment"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source": "readme_medifront",
+      "target": "readme_react_compiler_rationale"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "routing_architecture",
+      "label": "App Routing & Navigation",
+      "nodes": [
+        "app_component",
+        "home_page",
+        "search_page",
+        "login_page",
+        "register_page",
+        "profile_page",
+        "professional_page"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "src/App.tsx"
+    },
+    {
+      "id": "registration_flow",
+      "label": "User Onboarding Flow",
+      "nodes": [
+        "register_page",
+        "register_patient_page",
+        "register_doctor_page",
+        "register_clinic_page"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/pages/RegisterPage.tsx"
+    },
+    {
+      "id": "registration_flow",
+      "label": "Registration Flow",
+      "nodes": [
+        "registerclinicform_handlesubmit",
+        "registerpatientform_handlesubmit",
+        "registerdoctorform_handlesubmit",
+        "authstore_login"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "src/components/forms/RegisterClinicForm.tsx"
+    }
+  ],
+  "built_at_commit": "df7cb165f962add64d8942eb770d94472d9cdf9e"
+}
