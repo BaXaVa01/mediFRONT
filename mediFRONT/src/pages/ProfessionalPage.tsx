@@ -1,9 +1,8 @@
 import React from 'react';
 import { Sidebar } from '../components/professional/Sidebar';
-import { AppointmentList } from '../components/professional/AppointmentList';
-import { CalendarView } from '../components/professional/CalendarView';
 import { mockDoctors } from '../utils/mockData';
 import { Bell, Search } from 'lucide-react';
+import { Outlet } from 'react-router-dom';
 
 const ProfessionalPage: React.FC = () => {
   const doctor = mockDoctors[0]; // Simulating logged in doctor
@@ -42,41 +41,8 @@ const ProfessionalPage: React.FC = () => {
         </header>
 
         {/* Dashboard Content */}
-        <main className="p-8 space-y-8">
-          <div className="flex justify-between items-end">
-            <div>
-              <h1 className="text-3xl font-black text-[#1C365C] tracking-tight">Panel de Control</h1>
-              <p className="text-[#4A628A] font-medium mt-1">Bienvenido de nuevo, {doctor.name.split(' ')[1]}. Tienes {doctor.appointments.length} citas hoy.</p>
-            </div>
-            <div className="flex gap-3">
-               <div className="bg-white px-4 py-2 rounded-xl shadow-sm border border-[#E6CBB8]/30 text-center">
-                  <p className="text-[10px] font-black text-[#5A9BD4] uppercase">Pacientes Totales</p>
-                  <p className="text-xl font-black text-[#1C365C]">1,248</p>
-               </div>
-               <div className="bg-white px-4 py-2 rounded-xl shadow-sm border border-[#E6CBB8]/30 text-center">
-                  <p className="text-[10px] font-black text-[#5A9BD4] uppercase">Ingresos Mes</p>
-                  <p className="text-xl font-black text-[#1C365C]">$8,420</p>
-               </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-            <div className="lg:col-span-2 h-[700px]">
-              <CalendarView />
-            </div>
-            <div className="space-y-8">
-              <AppointmentList appointments={doctor.appointments} />
-              
-              <div className="bg-[#1C365C] rounded-2xl p-6 text-white relative overflow-hidden group">
-                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full -mr-8 -mt-8 group-hover:scale-110 transition-transform duration-500" />
-                 <h3 className="font-bold mb-2">Soporte MediFind</h3>
-                 <p className="text-xs text-slate-300 mb-4 leading-relaxed">¿Necesitas ayuda con la gestión de tu agenda o telemedicina?</p>
-                 <button className="bg-[#5A9BD4] text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-[#4a8bc4] transition-colors">
-                   Contactar Soporte
-                 </button>
-              </div>
-            </div>
-          </div>
+        <main className="flex-1 flex flex-col relative overflow-hidden">
+          <Outlet />
         </main>
       </div>
     </div>
