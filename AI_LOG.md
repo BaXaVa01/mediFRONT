@@ -50,3 +50,10 @@
 - Updated 'Doctor' type and mock data to include appointment history and status.
 - Integrated ProfessionalPage into App.tsx routing.
 - Verified successful production build and resolved linting issues.
+- Setup Zustand agendaStore in src/store/agendaStore.ts
+
+## 2026-05-08: Agenda Page Layout & Left Column (Filters)
+- Created AgendaFilterPanel component with view mode toggles (daily/weekly) and category filters.
+- Updated AgendaPage layout with a three-column structure: Filters, Calendar (center stub), and Details (right stub).
+- Integrated AgendaFilterPanel with agendaStore for state management.
+- Verified successful production build.
