@@ -59,3 +59,8 @@
 - Verified successful production build.
 - Implemented AppointmentDetailPanel
 - Integrated AppointmentDetailPanel into AgendaPage
+- Upgraded HomePage visual design with Apple-inspired clean aesthetic and Framer Motion.
+- Redesigned Navbar and SearchResultCard for visual consistency and premium feel.
+- Established design system in PRODUCT.md and DESIGN.md.
+- Upgraded Doctor Profile components with Apple-inspired visual system (oatmeal/navy), Framer Motion staggered reveals, and refined typography.
+- Upgraded SearchPage visuals and animations with Framer Motion, replaced Leaflet map tile with premium CartoDB Positron, and added auto-geolocation prompt.

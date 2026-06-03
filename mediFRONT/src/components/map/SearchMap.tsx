@@ -49,8 +49,11 @@ const SearchMap: React.FC<SearchMapProps> = ({ doctors, targetLocation }) => {
       const initialView: [number, number] = userCoords || [12.1364, -86.2514];
       leafletMap.current = L.map(mapRef.current).setView(initialView, userCoords ? 15 : 12);
 
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      // Using CartoDB Positron for a cleaner, Apple-like minimal aesthetic
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 20
       }).addTo(leafletMap.current);
 
       markersLayer.current = L.layerGroup().addTo(leafletMap.current);
@@ -207,22 +210,21 @@ const SearchMap: React.FC<SearchMapProps> = ({ doctors, targetLocation }) => {
   }, [doctors, userCoords, targetLocation]);
 
   return (
-    <div className="w-full h-full min-h-[400px] rounded-xl overflow-hidden shadow-inner border border-slate-200 bg-slate-100 relative">
+    <div className="w-full h-full min-h-[400px] rounded-[2.5rem] overflow-hidden shadow-[0_10px_30px_rgba(28,54,92,0.05)] border border-[#1C365C]/5 bg-white relative">
       <div ref={mapRef} className="w-full h-full min-h-[400px] z-0" />
       
       {/* Map Controls Overlay */}
-      <div className="absolute top-4 right-4 z-[1000] flex flex-col gap-2">
+      <div className="absolute top-6 right-6 z-[1000] flex flex-col gap-2">
         <Button 
           variant="outline" 
-          size="sm" 
           onClick={findMe}
-          className="bg-white shadow-md border-slate-200 hover:bg-slate-50"
+          className="bg-white/90 backdrop-blur-md shadow-lg border border-[#1C365C]/10 hover:bg-white text-[#1C365C] h-12 px-5 rounded-2xl font-bold transition-all"
           disabled={isLocating}
         >
           {isLocating ? (
-            <Loader2 className="h-4 w-4 animate-spin" />
+            <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
-            <MapPin className="h-4 w-4 text-[#5A9BD4]" />
+            <MapPin className="h-5 w-5 text-[#5A9BD4]" />
           )}
           <span className="ml-2 hidden sm:inline">Mi ubicación</span>
         </Button>

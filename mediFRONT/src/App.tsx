@@ -19,7 +19,7 @@ const App: React.FC = () => {
     <Router>
       <div className="min-h-screen bg-[#FDF9F3]">
         <Navbar />
-        <main>
+        <main className="pt-20">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/buscar" element={<SearchPage />} />

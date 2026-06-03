@@ -16,6 +16,8 @@ import { CareLocationsTabs } from '../components/profile/CareLocationsTabs';
 import { GalleryGrid } from '../components/profile/GalleryGrid';
 import { ReviewsSection } from '../components/profile/ReviewsSection';
 import { DoctorAvailabilityPanel } from '../components/profile/DoctorAvailabilityPanel';
+import { motion } from 'framer-motion';
+import type { Variants } from 'framer-motion';
 
 const ProfilePage: React.FC = () => {
   const { isAuthenticated } = useAuthStore();
@@ -48,51 +50,100 @@ const ProfilePage: React.FC = () => {
   const doctor = isDoctor ? (profile as Doctor) : null;
   const clinic = !isDoctor ? (profile as Clinic) : null;
 
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.16, 1, 0.3, 1],
+      },
+    },
+  };
+
   return (
-    <div className="min-h-screen pb-20 bg-[#FDF9F3]">
+    <div className="min-h-screen pb-20 bg-[#FDF9F3] selection:bg-[#5A9BD4]/30">
       {/* Header Banner */}
-      <div className="h-56 bg-gradient-to-r from-[#5A9BD4]/20 to-[#E6CBB8]/20 relative">
-        <button 
+      <div className="h-64 bg-gradient-to-b from-[#5A9BD4]/10 to-transparent relative overflow-hidden">
+        <div className="absolute inset-0 opacity-30">
+           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,#5A9BD4_0%,transparent_50%)]" />
+           <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,#E6CBB8_0%,transparent_50%)]" />
+        </div>
+        <motion.button 
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
           onClick={() => navigate(-1)}
-          className="absolute top-6 left-6 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all z-20 group"
+          className="absolute top-24 left-6 p-3 rounded-2xl bg-white/80 backdrop-blur-md shadow-sm border border-[#1C365C]/5 hover:bg-white transition-all z-20 group"
         >
           <ArrowLeft className="h-5 w-5 text-[#1C365C] group-hover:-translate-x-1 transition-transform" />
-        </button>
+        </motion.button>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 -mt-24">
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="max-w-6xl mx-auto px-6 -mt-24 relative z-10"
+      >
         {isDoctor && doctor ? (
           <div className="space-y-8">
-            <ProfileHero doctor={doctor} />
+            <motion.div variants={itemVariants}>
+              <ProfileHero doctor={doctor} />
+            </motion.div>
+            
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <div className="lg:col-span-2 space-y-8">
-                <DoctorExperienceCard doctor={doctor} />
-                <ServicesPricingCard doctor={doctor} />
-                <CareLocationsTabs doctor={doctor} />
-                <GalleryGrid doctor={doctor} />
-                <ReviewsSection doctor={doctor} />
+                <motion.div variants={itemVariants}>
+                  <DoctorExperienceCard doctor={doctor} />
+                </motion.div>
+                <motion.div variants={itemVariants}>
+                  <ServicesPricingCard doctor={doctor} />
+                </motion.div>
+                <motion.div variants={itemVariants}>
+                  <CareLocationsTabs doctor={doctor} />
+                </motion.div>
+                <motion.div variants={itemVariants}>
+                  <GalleryGrid doctor={doctor} />
+                </motion.div>
+                <motion.div variants={itemVariants}>
+                  <ReviewsSection doctor={doctor} />
+                </motion.div>
               </div>
               <div className="space-y-8">
-                <DoctorAvailabilityPanel doctor={doctor} />
+                <motion.div variants={itemVariants}>
+                  <DoctorAvailabilityPanel doctor={doctor} />
+                </motion.div>
               </div>
             </div>
           </div>
         ) : (
           /* Clinic Fallback UI */
-          <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-[#E6CBB8]/20 p-12">
+          <motion.div variants={itemVariants} className="bg-white rounded-[2.5rem] shadow-xl overflow-hidden border border-[#1C365C]/5 p-12">
              <div className="flex flex-col sm:flex-row gap-8 items-center mb-8 text-center sm:text-left">
-                <img src={clinic?.logo} alt={clinic?.name} className="w-32 h-32 rounded-2xl object-cover border-4 border-white shadow-lg" />
+                <img src={clinic?.logo} alt={clinic?.name} className="w-32 h-32 rounded-3xl object-cover border-4 border-white shadow-lg" />
                 <div>
                    <h1 className="text-3xl font-bold text-[#1C365C] mb-2">{clinic?.name}</h1>
-                   <p className="text-[#4A628A] text-lg max-w-lg">{clinic?.bio}</p>
+                   <p className="text-[#1C365C]/60 text-lg max-w-lg">{clinic?.bio}</p>
                 </div>
              </div>
-             <div className="bg-slate-50 rounded-2xl p-6 text-center border border-dashed border-[#E6CBB8]">
-               <p className="text-sm text-slate-500 font-medium">Perfil de clínica básico (No actualizado con nuevas secciones).</p>
+             <div className="bg-[#FDF9F3]/50 rounded-2xl p-6 text-center border border-dashed border-[#1C365C]/10">
+               <p className="text-sm text-[#1C365C]/50 font-medium">Perfil de clínica básico (No actualizado con nuevas secciones).</p>
              </div>
-          </div>
+          </motion.div>
         )}
-      </div>
+      </motion.div>
     </div>
   );
 };

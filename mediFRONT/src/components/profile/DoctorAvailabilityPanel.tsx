@@ -5,21 +5,21 @@ import { Button } from '../ui/Button';
 
 export const DoctorAvailabilityPanel: React.FC<{ doctor: Doctor }> = ({ doctor }) => {
   return (
-    <div className="bg-white rounded-3xl shadow-lg border border-[#E6CBB8]/50 p-6 sticky top-24">
-      <h3 className="font-bold text-[#1C365C] mb-6 flex items-center gap-2">
-        <div className="p-2 bg-[#5A9BD4]/10 rounded-lg">
+    <div className="bg-white rounded-[2.5rem] shadow-[0_10px_30px_rgba(28,54,92,0.05)] border border-[#1C365C]/5 p-8 sticky top-28">
+      <h3 className="text-xl font-bold text-[#1C365C] mb-8 tracking-tight flex items-center gap-3">
+        <div className="p-2 bg-[#5A9BD4]/10 rounded-xl">
           <Calendar className="h-5 w-5 text-[#5A9BD4]" />
         </div>
         Horarios de Atención
       </h3>
 
-      <div className="space-y-3 mb-8">
+      <div className="space-y-4 mb-10">
         {doctor.schedule.map((s, i) => (
-          <div key={i} className="flex justify-between items-start text-sm border-b border-slate-50 pb-3 last:border-0 last:pb-0">
-            <span className="font-bold text-[#4A628A]">{s.day}</span>
-            <div className="flex flex-col items-end gap-1">
+          <div key={i} className="flex justify-between items-start text-sm border-b border-[#1C365C]/5 pb-4 last:border-0 last:pb-0">
+            <span className="font-bold text-[#1C365C]/70">{s.day}</span>
+            <div className="flex flex-col items-end gap-1.5">
                {s.hours.split(',').map((h, idx) => (
-                 <span key={idx} className="text-right text-[#1C365C] font-medium bg-slate-50 px-2 py-0.5 rounded text-[11px]">
+                 <span key={idx} className="text-right text-[#1C365C] font-semibold bg-[#FDF9F3] px-2.5 py-1 rounded-md text-xs border border-[#1C365C]/5">
                    {h.trim()}
                  </span>
                ))}
@@ -28,20 +28,20 @@ export const DoctorAvailabilityPanel: React.FC<{ doctor: Doctor }> = ({ doctor }
         ))}
       </div>
 
-      <div className="bg-[#5A9BD4]/5 p-5 rounded-2xl border border-[#5A9BD4]/10 text-center">
+      <div className="bg-[#FDF9F3]/80 p-6 rounded-[2rem] border border-[#1C365C]/5 text-center">
         <div className="flex items-center justify-center gap-2 text-[#5A9BD4] mb-2">
           <Clock className="w-4 h-4" />
-          <p className="text-xs font-black uppercase tracking-widest">Próxima Cita</p>
+          <p className="text-[10px] font-black uppercase tracking-widest">Próxima Cita</p>
         </div>
-        <p className="font-bold text-[#1C365C] text-lg mb-4">Mañana, 09:00 AM</p>
-        <Button variant="primary" className="w-full h-12 shadow-md hover:shadow-lg transition-all group">
+        <p className="font-bold text-[#1C365C] text-xl mb-6">Mañana, 09:00 AM</p>
+        <Button className="w-full h-14 bg-[#5A9BD4] text-white hover:bg-[#4A8BC4] active:scale-95 transition-all text-base font-bold rounded-2xl shadow-lg shadow-[#5A9BD4]/20 flex items-center justify-center gap-2 group">
           Agendar Cita 
-          <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+          <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </Button>
       </div>
 
-      <p className="text-[10px] text-[#4A628A] text-center mt-4 font-medium italic">
-        * Sujeto a cambios según disponibilidad real.
+      <p className="text-xs text-[#1C365C]/40 text-center mt-6 font-medium">
+        * Sujeto a disponibilidad en tiempo real.
       </p>
     </div>
   );
