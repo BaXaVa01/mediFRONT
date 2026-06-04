@@ -52,8 +52,8 @@
     "hash": "1f163257cc8e173ceb15dbd584fe01c2"
   },
   "/home/baxava/Documents/UAM 2026/emprendedores/MEDIFIND/mediFRONT/mediFRONT/src/pages/ProfessionalPage.tsx": {
-    "mtime": 1780516612.8784328,
-    "hash": "c3ec538216498c62b2fca29c8d4f2e3c"
+    "mtime": 1780558877.8803263,
+    "hash": "7f80773124de1d7b072a61065cdb7796"
   },
   "/home/baxava/Documents/UAM 2026/emprendedores/MEDIFIND/mediFRONT/mediFRONT/src/pages/LoginPage.tsx": {
     "mtime": 1780556028.7950854,
@@ -108,12 +108,16 @@
     "hash": "1e40e2d02e0fa418a676a170cdb18f36"
   },
   "/home/baxava/Documents/UAM 2026/emprendedores/MEDIFIND/mediFRONT/mediFRONT/src/components/professional/Sidebar.tsx": {
-    "mtime": 1779258028.1526248,
-    "hash": "6243743aeefa71f2c3275afd49d6feda"
+    "mtime": 1780558887.5941646,
+    "hash": "3b23728cb74c1da46357f457ce145295"
   },
   "/home/baxava/Documents/UAM 2026/emprendedores/MEDIFIND/mediFRONT/mediFRONT/src/components/professional/AppointmentList.tsx": {
     "mtime": 1779258028.1525493,
     "hash": "036651df32c037bfca7418bb165c4b40"
+  },
+  "/home/baxava/Documents/UAM 2026/emprendedores/MEDIFIND/mediFRONT/mediFRONT/src/components/professional/Topbar.tsx": {
+    "mtime": 1780558902.8466928,
+    "hash": "54c61e87fb0d5dde5fe4d0512e098c98"
   },
   "/home/baxava/Documents/UAM 2026/emprendedores/MEDIFIND/mediFRONT/mediFRONT/src/components/professional/CalendarView.tsx": {
     "mtime": 1779258028.1526248,
@@ -304,8 +308,8 @@
     "hash": "cd07c9e858a1633a1d183e086c50463b"
   },
   "/home/baxava/Documents/UAM 2026/emprendedores/MEDIFIND/mediFRONT/mediFRONT/AI_LOG.md": {
-    "mtime": 1779258028.1154876,
-    "hash": "38a177bc4f0db8af3559465a20535650"
+    "mtime": 1780558915.6207576,
+    "hash": "525b93f755b8e2c7fc15dcc4fb03d469"
   },
   "/home/baxava/Documents/UAM 2026/emprendedores/MEDIFIND/mediFRONT/mediFRONT/docker-compose.yml": {
     "mtime": 1779258028.1158547,
@@ -318,6 +322,10 @@
   "/home/baxava/Documents/UAM 2026/emprendedores/MEDIFIND/mediFRONT/mediFRONT/public/icons.svg": {
     "mtime": 1777006580.327665,
     "hash": "3b4fcfcf393eca4d264dca4a4663bc37"
+  },
+  "/home/baxava/Documents/UAM 2026/emprendedores/MEDIFIND/mediFRONT/mediFRONT/src/assets/logo_pro.png": {
+    "mtime": 1780558820.2548902,
+    "hash": "92dcb6bceaa34d67fe5efabda34c9e38"
   },
   "/home/baxava/Documents/UAM 2026/emprendedores/MEDIFIND/mediFRONT/mediFRONT/src/assets/vite.svg": {
     "mtime": 1777006580.3283086,
@@ -334,6 +342,10 @@
   "/home/baxava/Documents/UAM 2026/emprendedores/MEDIFIND/mediFRONT/mediFRONT/src/assets/doctor.png": {
     "mtime": 1779258028.1184278,
     "hash": "ad671d3e59a0a73f4e59a13adf24e494"
+  },
+  "/home/baxava/Documents/UAM 2026/emprendedores/MEDIFIND/mediFRONT/mediFRONT/src/assets/medifind_logo.png": {
+    "mtime": 1780558274.3776906,
+    "hash": "a42026952ad15d52fa177a061c2a6fff"
   },
   "/home/baxava/Documents/UAM 2026/emprendedores/MEDIFIND/mediFRONT/mediFRONT/src/assets/homepage.png": {
     "mtime": 1779258028.1519,

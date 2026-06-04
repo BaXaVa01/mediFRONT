@@ -2,7 +2,7 @@ import React from 'react';
 import { Calendar, Users, Settings, LogOut, ChevronRight } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../../store/authStore';
-import logo from '../../assets/medifind_logo.png';
+import logo from '../../assets/logo_pro.png';
 
 export const Sidebar: React.FC = () => {
   const location = useLocation();
@@ -22,10 +22,8 @@ export const Sidebar: React.FC = () => {
 
   return (
     <div className="w-64 bg-[#1C365C] min-h-screen flex flex-col text-white">
-      <div className="p-6 mb-2">
-        <div className="bg-white p-3 rounded-xl shadow-sm">
-          <img src={logo} alt="MediFind" className="h-8 w-auto mx-auto" />
-        </div>
+      <div className="p-8 mb-4 flex justify-center">
+        <img src={logo} alt="MediFind" className="h-16 w-auto brightness-0 invert object-contain" />
       </div>
 
       <nav className="flex-1 px-4 space-y-2">

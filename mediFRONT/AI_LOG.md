@@ -9,7 +9,8 @@
 - Added local state for tab switching.
 - Verified build passes.
 - Task 7: Public Profile Scaffold implemented and verified.
-### Fix Sidebar Logo and Logout
-- Copied new logo to src/assets/medifind_logo.png
-- Replaced text logo in Sidebar.tsx with the new image on a white background for visibility.
-- Implemented logout functionality in Sidebar.tsx using useAuthStore.
+### Professional Module Branding Update
+- Copied new logo from mockups to `src/assets/logo_pro.png`.
+- Updated `Sidebar.tsx` to use the new logo with white color filter on dark background.
+- Created `Topbar.tsx` component to unify header logic and include the new branding.
+- Refactored `ProfessionalPage.tsx` to use the new `Topbar` component.
