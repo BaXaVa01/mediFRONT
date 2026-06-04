@@ -38,6 +38,7 @@ Technical stack:
 - frontend: React + Vite + TypeScript + Tailwind + shadcn/ui
 
 Rules:
+- allways use graphify before editing anything
 - Follow the business rules in docs/reglas_de_negocio.txt.
 - Follow OWASP basics.
 - Validate inputs.

@@ -11,7 +11,14 @@ export const useAuthStore = create<AuthState>((set) => ({
   isAuthenticated: false,
   user: null,
   login: (credentials) => {
-    set({ isAuthenticated: true, user: { name: 'Test User', email: credentials.email } });
+    set({ 
+      isAuthenticated: true, 
+      user: { 
+        name: credentials.role === 'pro' ? 'Dr. Julian Smith' : 'Arthur Morgan', 
+        email: credentials.email,
+        role: credentials.role || 'patient'
+      } 
+    });
   },
   logout: () => set({ isAuthenticated: false, user: null }),
 }));
