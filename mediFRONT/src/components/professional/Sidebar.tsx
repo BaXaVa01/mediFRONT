@@ -1,15 +1,14 @@
 import React from 'react';
-import { LayoutDashboard, Calendar, Users, Settings, LogOut, ChevronRight } from 'lucide-react';
+import { Calendar, Users, Settings, LogOut, ChevronRight } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 export const Sidebar: React.FC = () => {
   const location = useLocation();
   
   const menuItems = [
-    { icon: LayoutDashboard, label: 'Dashboard', path: '/pro' },
-    { icon: Calendar, label: 'Calendario', path: '/pro/calendar' },
-    { icon: Users, label: 'Pacientes', path: '/pro/patients' },
-    { icon: Settings, label: 'Configuración', path: '/pro/settings' },
+    { icon: Calendar, label: 'Agenda', path: '/pro/agenda' },
+    { icon: Settings, label: 'Configuración', path: '/pro/config' },
+    { icon: Users, label: 'Perfil Público', path: '/pro/profile' },
   ];
 
   return (
@@ -22,7 +21,7 @@ export const Sidebar: React.FC = () => {
 
       <nav className="flex-1 px-4 space-y-2">
         {menuItems.map((item) => {
-          const isActive = location.pathname === item.path;
+          const isActive = location.pathname.includes(item.path);
           return (
             <Link
               key={item.path}

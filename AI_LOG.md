@@ -50,3 +50,26 @@
 - Updated 'Doctor' type and mock data to include appointment history and status.
 - Integrated ProfessionalPage into App.tsx routing.
 - Verified successful production build and resolved linting issues.
+- Setup Zustand agendaStore in src/store/agendaStore.ts
+
+## 2026-05-08: Agenda Page Layout & Left Column (Filters)
+- Created AgendaFilterPanel component with view mode toggles (daily/weekly) and category filters.
+- Updated AgendaPage layout with a three-column structure: Filters, Calendar (center stub), and Details (right stub).
+- Integrated AgendaFilterPanel with agendaStore for state management.
+- Verified successful production build.
+- Implemented AppointmentDetailPanel
+- Integrated AppointmentDetailPanel into AgendaPage
+- Upgraded HomePage visual design with Apple-inspired clean aesthetic and Framer Motion.
+- Redesigned Navbar and SearchResultCard for visual consistency and premium feel.
+- Established design system in PRODUCT.md and DESIGN.md.
+- Upgraded Doctor Profile components with Apple-inspired visual system (oatmeal/navy), Framer Motion staggered reveals, and refined typography.
+- Upgraded SearchPage visuals and animations with Framer Motion, replaced Leaflet map tile with premium CartoDB Positron, and added auto-geolocation prompt.
+- Upgraded /pro/agenda module to match Google Calendar aesthetic using caveman (ultra) logic and taste skill animations.
+- Added missing MiniCalendar and hooked up interactive state in /pro/agenda using Zustand.
+- Included mock backend structure in mediBACK for Agenda implementation.
+- Added Full Settings Module (/pro/config) with 6 functional tabs: Requests, Schedule, Blocks, Services, Reminders, and Rules.
+- Implemented mock backend structure for settings in mediBACK.
+- Implemented Emil's design engineering principles across /pro/config tabs: AnimatePresence for lists, loading states, and 'Propose Time' modal.
+- Added Full Public Profile Editor Module (/pro/profile) with Identity, Contact, Image Upload, Education, and Experience forms.
+- Implemented mock backend structure for profile in mediBACK.
+- Profile Editor: Added inline editing forms with AnimatePresence for Education and Experience sections.
