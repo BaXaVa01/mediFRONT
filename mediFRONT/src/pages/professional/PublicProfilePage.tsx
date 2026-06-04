@@ -1,35 +1,52 @@
-// src/pages/professional/PublicProfilePage.tsx
+import { useEffect } from 'react';
+import { useProfileStore } from '../../store/profileStore';
+import { LoadingState, SaveToast } from '../../components/professional/config/SystemStates';
+import { ProfileImageUploader } from '../../components/professional/profile/ProfileImageUploader';
+import { ProfileIdentityForm } from '../../components/professional/profile/ProfileIdentityForm';
+import { ProfileContactForm } from '../../components/professional/profile/ProfileContactForm';
+import { EducationSection } from '../../components/professional/profile/EducationSection';
+import { ExperienceSection } from '../../components/professional/profile/ExperienceSection';
+import { ExternalLink } from 'lucide-react';
 
 export default function PublicProfilePage() {
+  const { fetchProfile, isLoading, saveSuccess } = useProfileStore();
+
+  useEffect(() => {
+    fetchProfile();
+  }, [fetchProfile]);
+
   return (
-    <div className="p-8 max-w-4xl mx-auto h-[calc(100vh-5rem)] overflow-y-auto pb-20">
-      <div className="bg-white rounded-2xl shadow-sm border border-[#E6CBB8]/30 p-8">
-        <h2 className="text-2xl font-black text-[#1C365C] mb-2 tracking-tight">Perfil Público</h2>
-        <p className="text-sm font-medium text-slate-500 mb-8 pb-6 border-b border-slate-100">Esta información será visible para los pacientes en los resultados de búsqueda.</p>
-        
-        <div className="space-y-8">
-          <div className="flex items-center gap-6">
-            <div className="w-24 h-24 bg-slate-50 rounded-full border-2 border-dashed border-slate-300 flex items-center justify-center text-slate-400 font-bold text-xs cursor-pointer hover:bg-slate-100 transition-colors">
-              Subir Foto
-            </div>
-            <div>
-              <p className="font-bold text-[#1C365C]">Foto de Perfil</p>
-              <p className="text-xs text-slate-500 font-medium mt-1">Recomendado: 500x500px, PNG o JPG.</p>
-            </div>
-          </div>
+    <div className="h-[100vh] flex bg-[#FDF9F3] overflow-hidden">
+      <div className="flex-1 bg-white overflow-y-auto p-8 lg:p-12 custom-scrollbar">
+        <div className="max-w-4xl mx-auto space-y-10">
           
-          <div className="grid grid-cols-2 gap-6 pt-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <label className="block text-[10px] font-black text-[#5A9BD4] uppercase tracking-widest mb-2">Nombre Profesional</label>
-              <input type="text" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:border-[#5A9BD4] outline-none font-medium text-sm transition-colors" placeholder="Dr. Nombre Apellido" />
+              <h2 className="text-3xl font-black text-[#1C365C] tracking-tight">Perfil Público</h2>
+              <p className="text-[#1C365C]/60 text-sm mt-1">Gestiona la información que los pacientes ven al buscarte.</p>
             </div>
-            <div>
-              <label className="block text-[10px] font-black text-[#5A9BD4] uppercase tracking-widest mb-2">Especialidad Principal</label>
-              <input type="text" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:border-[#5A9BD4] outline-none font-medium text-sm transition-colors" placeholder="Ej. Cardiología" />
-            </div>
+            <button className="flex items-center gap-2 bg-[#FDF9F3] border border-[#1C365C]/5 text-[#1C365C] px-5 h-10 rounded-xl font-bold text-sm hover:bg-[#5A9BD4]/10 hover:text-[#5A9BD4] hover:border-[#5A9BD4]/20 transition-all shadow-sm">
+              <ExternalLink className="w-4 h-4" /> Ver Perfil
+            </button>
           </div>
+
+          {isLoading ? (
+            <LoadingState />
+          ) : (
+            <div className="space-y-8 pb-12">
+              <ProfileImageUploader />
+              <ProfileIdentityForm />
+              <ProfileContactForm />
+              
+              <div className="grid grid-cols-1 gap-8">
+                <EducationSection />
+                <ExperienceSection />
+              </div>
+            </div>
+          )}
         </div>
       </div>
+      <SaveToast visible={saveSuccess} />
     </div>
   );
 }

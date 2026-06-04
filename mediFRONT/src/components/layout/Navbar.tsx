@@ -1,9 +1,13 @@
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Button } from '../ui/Button';
 import { Search, User, Home, Menu } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export const Navbar = () => {
+  const location = useLocation();
+  
+  if (location.pathname.startsWith('/pro')) return null;
+
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-[#1C365C]/5 bg-[#FDF9F3]/80 backdrop-blur-xl">
       <div className="container mx-auto flex h-20 items-center justify-between px-6">
