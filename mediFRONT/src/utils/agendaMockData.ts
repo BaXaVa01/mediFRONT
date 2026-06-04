@@ -24,26 +24,70 @@ export interface ScheduleRequest {
   modality: ApptModality;
 }
 
-// Current date for the app is 2026-06-04
-const today = new Date(2026, 5, 4); // June is index 5
+// Today is Thursday 2026-06-04
+const today = new Date(2026, 5, 4); 
 today.setHours(0, 0, 0, 0);
 
-const oneWeekBefore = new Date(today);
-oneWeekBefore.setDate(today.getDate() - 7);
-
-const oneWeekAfter = new Date(today);
-oneWeekAfter.setDate(today.getDate() + 7);
+// Helper to get date for current week (Sun-Sat)
+const getDayInWeek = (dayIndex: number) => {
+  const d = new Date(2026, 5, 4); // Start with today
+  d.setDate(d.getDate() - d.getDay() + dayIndex); // Subtract today's index and add target
+  d.setHours(0, 0, 0, 0);
+  return d;
+};
 
 export const mockAppointments: Appointment[] = [
-  // TODAY: 2026-06-04
+  // MONDAY 01/06
+  {
+    id: 'apt_mon_1',
+    patientId: 'MF-0001',
+    patientName: 'John Marston',
+    service: 'Initial Consultation',
+    startTime: new Date(getDayInWeek(1).getTime() + 9 * 60 * 60 * 1000),
+    endTime: new Date(getDayInWeek(1).getTime() + 10 * 60 * 60 * 1000),
+    modality: 'In-Person',
+    price: 100,
+    location: 'MediFind Center - Suite 1',
+    status: 'completed',
+  },
+  
+  // TUESDAY 02/06
+  {
+    id: 'apt_tue_1',
+    patientId: 'MF-0002',
+    patientName: 'Sadie Adler',
+    service: 'Follow-up',
+    startTime: new Date(getDayInWeek(2).getTime() + 11 * 60 * 60 * 1000),
+    endTime: new Date(getDayInWeek(2).getTime() + 11.5 * 60 * 60 * 1000),
+    modality: 'Online',
+    price: 80,
+    location: 'Zoom',
+    status: 'completed',
+  },
+
+  // WEDNESDAY 03/06
+  {
+    id: 'apt_wed_1',
+    patientId: 'MF-0003',
+    patientName: 'Charles Smith',
+    service: 'Emergency Checkup',
+    startTime: new Date(getDayInWeek(3).getTime() + 14 * 60 * 60 * 1000),
+    endTime: new Date(getDayInWeek(3).getTime() + 15 * 60 * 60 * 1000),
+    modality: 'In-Person',
+    price: 150,
+    location: 'MediFind Center - Suite 1',
+    status: 'completed',
+  },
+
+  // THURSDAY 04/06 (TODAY)
   {
     id: 'apt_today_1',
     patientId: 'MF-8829',
     patientName: 'Arthur Morgan',
     patientAvatar: 'https://i.pravatar.cc/150?u=arthur',
-    service: 'Consultation',
-    startTime: new Date(today.getTime() + 9 * 60 * 60 * 1000), // 09:00
-    endTime: new Date(today.getTime() + 9 * 60 * 60 * 1000 + 45 * 60 * 1000), // 09:45
+    service: 'General Consultation',
+    startTime: new Date(getDayInWeek(4).getTime() + 9 * 60 * 60 * 1000),
+    endTime: new Date(getDayInWeek(4).getTime() + 9.75 * 60 * 60 * 1000),
     modality: 'In-Person',
     price: 120,
     location: 'MediFind Center - Suite 4B',
@@ -52,66 +96,41 @@ export const mockAppointments: Appointment[] = [
   {
     id: 'apt_today_2',
     patientId: 'MF-4412',
-    patientName: 'Sadie Adler',
-    patientAvatar: 'https://i.pravatar.cc/150?u=sadie',
-    service: 'Follow-up',
-    startTime: new Date(today.getTime() + 10.5 * 60 * 60 * 1000), // 10:30
-    endTime: new Date(today.getTime() + 11.5 * 60 * 60 * 1000), // 11:30
-    modality: 'In-Person',
-    price: 80,
-    location: 'MediFind Center - Suite 4B',
+    patientName: 'Dutch van der Linde',
+    service: 'Executive Review',
+    startTime: new Date(getDayInWeek(4).getTime() + 13 * 60 * 60 * 1000),
+    endTime: new Date(getDayInWeek(4).getTime() + 14 * 60 * 60 * 1000),
+    modality: 'Online',
+    price: 200,
+    location: 'Google Meet',
     status: 'pending',
   },
-  {
-    id: 'apt_today_3',
-    patientId: 'MF-9911',
-    patientName: 'John Marston',
-    service: 'Checkup',
-    startTime: new Date(today.getTime() + 14 * 60 * 60 * 1000), // 14:00
-    endTime: new Date(today.getTime() + 15.5 * 60 * 60 * 1000), // 15:30
-    modality: 'Online',
-    price: 100,
-    location: 'Google Meet',
-    status: 'confirmed',
-  },
 
-  // ONE WEEK BEFORE: 2026-05-28
+  // FRIDAY 05/06
   {
-    id: 'apt_prev_1',
-    patientId: 'MF-1122',
-    patientName: 'Charles Smith',
-    service: 'Therapy',
-    startTime: new Date(oneWeekBefore.getTime() + 11 * 60 * 60 * 1000), // 11:00
-    endTime: new Date(oneWeekBefore.getTime() + 12 * 60 * 60 * 1000), // 12:00
+    id: 'apt_fri_1',
+    patientId: 'MF-0004',
+    patientName: 'Hosea Matthews',
+    service: 'Therapy Session',
+    startTime: new Date(getDayInWeek(5).getTime() + 10 * 60 * 60 * 1000),
+    endTime: new Date(getDayInWeek(5).getTime() + 11.5 * 60 * 60 * 1000),
     modality: 'In-Person',
     price: 90,
-    location: 'MediFind Center - Suite 4B',
-    status: 'completed',
-  },
-
-  // ONE WEEK AFTER: 2026-06-11
-  {
-    id: 'apt_next_1',
-    patientId: 'MF-3344',
-    patientName: 'Bill Williamson',
-    service: 'Surgery Prep',
-    startTime: new Date(oneWeekAfter.getTime() + 8 * 60 * 60 * 1000), // 08:00
-    endTime: new Date(oneWeekAfter.getTime() + 10 * 60 * 60 * 1000), // 10:00
-    modality: 'In-Person',
-    price: 200,
-    location: 'MediFind Center - OR 1',
+    location: 'MediFind Center - Suite 2',
     status: 'confirmed',
   },
+
+  // SATURDAY 06/06
   {
-    id: 'apt_next_2',
-    patientId: 'MF-5566',
-    patientName: 'Javier Escuella',
-    service: 'Quick Review',
-    startTime: new Date(oneWeekAfter.getTime() + 15 * 60 * 60 * 1000), // 15:00
-    endTime: new Date(oneWeekAfter.getTime() + 15.5 * 60 * 60 * 1000), // 15:30
-    modality: 'Online',
-    price: 50,
-    location: 'Zoom',
+    id: 'apt_sat_1',
+    patientId: 'MF-0005',
+    patientName: 'Lenny Summers',
+    service: 'Routine Screening',
+    startTime: new Date(getDayInWeek(6).getTime() + 8 * 60 * 60 * 1000),
+    endTime: new Date(getDayInWeek(6).getTime() + 9 * 60 * 60 * 1000),
+    modality: 'In-Person',
+    price: 60,
+    location: 'MediFind Center - Suite 1',
     status: 'confirmed',
   }
 ];
@@ -119,16 +138,9 @@ export const mockAppointments: Appointment[] = [
 export const mockRequests: ScheduleRequest[] = [
   {
     id: 'req_1',
-    patientName: 'Hosea Matthews',
+    patientName: 'Javier Escuella',
     service: 'Initial Consult',
     requestedDate: new Date(today.getTime() + 48 * 60 * 60 * 1000 + 10 * 60 * 60 * 1000),
     modality: 'Online'
-  },
-  {
-    id: 'req_2',
-    patientName: 'Lenny Summers',
-    service: 'Follow-up',
-    requestedDate: new Date(today.getTime() + 72 * 60 * 60 * 1000 + 15 * 60 * 60 * 1000),
-    modality: 'In-Person'
   }
 ];
