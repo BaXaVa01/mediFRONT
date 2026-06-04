@@ -1,9 +1,13 @@
 import React from 'react';
 import { Calendar, Users, Settings, LogOut, ChevronRight } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useAuthStore } from '../../store/authStore';
+import logo from '../../assets/logo_pro.png';
 
 export const Sidebar: React.FC = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const logout = useAuthStore((state) => state.logout);
   
   const menuItems = [
     { icon: Calendar, label: 'Agenda', path: '/pro/agenda' },
@@ -11,12 +15,15 @@ export const Sidebar: React.FC = () => {
     { icon: Users, label: 'Perfil Público', path: '/pro/profile' },
   ];
 
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
+
   return (
     <div className="w-64 bg-[#1C365C] min-h-screen flex flex-col text-white">
-      <div className="p-8">
-        <h1 className="text-2xl font-black tracking-tighter flex items-center gap-2">
-          MediFind <span className="bg-[#5A9BD4] text-[10px] px-2 py-0.5 rounded uppercase tracking-widest">Pro</span>
-        </h1>
+      <div className="p-8 mb-4 flex justify-center">
+        <img src={logo} alt="MediFind" className="h-16 w-auto brightness-0 invert object-contain" />
       </div>
 
       <nav className="flex-1 px-4 space-y-2">
@@ -43,7 +50,10 @@ export const Sidebar: React.FC = () => {
       </nav>
 
       <div className="p-4 border-t border-white/10">
-        <button className="flex items-center gap-3 p-3 w-full text-slate-400 hover:text-red-400 transition-colors">
+        <button 
+          onClick={handleLogout}
+          className="flex items-center gap-3 p-3 w-full text-slate-400 hover:text-red-400 transition-colors"
+        >
           <LogOut className="w-5 h-5" />
           <span className="font-bold text-sm">Cerrar Sesión</span>
         </button>

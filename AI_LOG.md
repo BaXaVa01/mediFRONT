@@ -73,3 +73,6 @@
 - Added Full Public Profile Editor Module (/pro/profile) with Identity, Contact, Image Upload, Education, and Experience forms.
 - Implemented mock backend structure for profile in mediBACK.
 - Profile Editor: Added inline editing forms with AnimatePresence for Education and Experience sections.
+- Applied Emil Kowalski's taste principles to /login and /registro. Added Framer Motion staggered reveals, split-screen layouts, and premium inputs.
+- Updated LoginPage to include smart mock routing: 'admin@email.com' redirects to /pro/agenda, all other emails redirect to /buscar.
+- Fixed empty space at the top of the /pro module by conditionally removing global top padding based on the route.
