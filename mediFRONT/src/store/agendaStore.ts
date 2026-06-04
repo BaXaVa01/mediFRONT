@@ -20,6 +20,11 @@ interface AgendaState {
   setPendingDrawerOpen: (open: boolean) => void;
   setRescheduleModalOpen: (open: boolean) => void;
   
+  // Navigation
+  nextDate: () => void;
+  prevDate: () => void;
+  goToToday: () => void;
+  
   // Data actions
   fetchData: () => Promise<void>;
   updateStatus: (id: string, status: Appointment['status']) => Promise<void>;
@@ -30,28 +35,75 @@ interface AgendaState {
 }
 
 export const useAgendaStore = create<AgendaState>((set, get) => ({
-  currentDate: new Date(),
+  currentDate: new Date(2026, 5, 4), // Initialize at the app's "today"
   viewMode: 'weekly',
-  activeFilters: ['confirmed', 'pending', 'In-Person', 'Online'], // default all active
+  activeFilters: ['confirmed', 'pending', 'In-Person', 'Online'],
   appointments: [],
   pendingRequests: [],
   selectedAppointment: null,
   isPendingDrawerOpen: false,
   isRescheduleModalOpen: false,
 
-  setCurrentDate: (date) => set({ currentDate: date }),
+  setCurrentDate: (date) => {
+    set({ currentDate: date });
+    get().fetchData();
+  },
+  
   setViewMode: (mode) => set({ viewMode: mode }),
+  
   toggleFilter: (filter) => {
     const filters = get().activeFilters;
     set({ activeFilters: filters.includes(filter) ? filters.filter(f => f !== filter) : [...filters, filter] });
   },
+  
   setSelectedAppointment: (apt) => set({ selectedAppointment: apt }),
   setPendingDrawerOpen: (open) => set({ isPendingDrawerOpen: open }),
   setRescheduleModalOpen: (open) => set({ isRescheduleModalOpen: open }),
 
+  nextDate: () => {
+    const { currentDate, viewMode } = get();
+    const newDate = new Date(currentDate);
+    if (viewMode === 'daily') {
+      newDate.setDate(currentDate.getDate() + 1);
+    } else {
+      newDate.setDate(currentDate.getDate() + 7);
+    }
+    get().setCurrentDate(newDate);
+  },
+
+  prevDate: () => {
+    const { currentDate, viewMode } = get();
+    const newDate = new Date(currentDate);
+    if (viewMode === 'daily') {
+      newDate.setDate(currentDate.getDate() - 1);
+    } else {
+      newDate.setDate(currentDate.getDate() - 7);
+    }
+    get().setCurrentDate(newDate);
+  },
+
+  goToToday: () => {
+    get().setCurrentDate(new Date(2026, 5, 4));
+  },
+
   fetchData: async () => {
+    const { currentDate, viewMode } = get();
+    let start = new Date(currentDate);
+    let end = new Date(currentDate);
+    
+    if (viewMode === 'daily') {
+      start.setHours(0, 0, 0, 0);
+      end.setHours(23, 59, 59, 999);
+    } else {
+      // Sunday to Saturday
+      start.setDate(currentDate.getDate() - currentDate.getDay());
+      start.setHours(0, 0, 0, 0);
+      end.setDate(start.getDate() + 6);
+      end.setHours(23, 59, 59, 999);
+    }
+
     const [apts, reqs] = await Promise.all([
-      agendaService.getAppointments(new Date(), new Date()), 
+      agendaService.getAppointments(start, end), 
       agendaService.getPendingRequests()
     ]);
     set({ appointments: apts, pendingRequests: reqs });

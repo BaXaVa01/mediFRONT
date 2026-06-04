@@ -9,23 +9,24 @@ interface AppointmentBlockProps {
 }
 
 export const AppointmentBlock: React.FC<AppointmentBlockProps> = ({ apt, dayIndex }) => {
-  const { selectedAppointment, setSelectedAppointment, viewMode } = useAgendaStore();
-  
+  const { selectedAppointment, setSelectedAppointment, viewMode, reschedule } = useAgendaStore();
+  const [isDragging, setIsDragging] = React.useState(false);
+
   // Calculate position and height based on 60px per hour starting at 08:00
   const startHour = apt.startTime.getHours() + apt.startTime.getMinutes() / 60;
   const endHour = apt.endTime.getHours() + apt.endTime.getMinutes() / 60;
-  
+
   const baseHour = 8; // Start of grid is 08:00
   const topPx = Math.max(0, (startHour - baseHour) * 60);
   const heightPx = Math.max(20, (endHour - startHour) * 60);
 
   // Layout calculation
   const totalCols = viewMode === 'weekly' ? 7 : 1;
-  const colWidth = 100 / totalCols;
-  const leftPct = dayIndex * colWidth;
-  
+  const colWidthPct = 100 / totalCols;
+  const leftPct = dayIndex * colWidthPct;
+
   const isSelected = selectedAppointment?.id === apt.id;
-  
+
   // Visual mapping
   const styleMap = {
     confirmed: { bg: 'bg-[#5A9BD4]/10', border: 'border-[#5A9BD4]', text: 'text-[#5A9BD4]' },
@@ -36,28 +37,68 @@ export const AppointmentBlock: React.FC<AppointmentBlockProps> = ({ apt, dayInde
 
   const style = styleMap[apt.status] || styleMap.pending;
 
+  const handleDragEnd = (_: any, info: any) => {
+    setIsDragging(false);
+
+    // Vertical offset -> Time change (1px = 1 min)
+    const minutesDelta = Math.round(info.offset.y);
+
+    // Horizontal offset -> Day change
+    // We need the approximate width of a column. 
+    // Since we don't have the pixel width easily, we'll estimate or use simple logic.
+    // For now, let's focus on vertical time change as it's the most common.
+
+    const newStart = new Date(apt.startTime);
+    newStart.setMinutes(newStart.getMinutes() + minutesDelta);
+
+    // Round to nearest 15 mins for taste
+    const roundedMins = Math.round(newStart.getMinutes() / 15) * 15;
+    newStart.setMinutes(roundedMins);
+
+    const durationMs = apt.endTime.getTime() - apt.startTime.getTime();
+    const newEnd = new Date(newStart.getTime() + durationMs);
+
+    // Boundary check (08:00 - 19:00)
+    if (newStart.getHours() >= 8 && newEnd.getHours() <= 19) {
+      reschedule(apt.id, newStart, newEnd);
+    }
+  };
+
   return (
     <motion.div
+      drag
+      dragMomentum={false}
+      dragElastic={0.05}
+      onDragStart={() => setIsDragging(true)}
+      onDragEnd={handleDragEnd}
       initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      whileHover={{ scale: 1.02, zIndex: 10 }}
-      onClick={() => setSelectedAppointment(apt)}
+      animate={{ 
+        opacity: 1, 
+        scale: isDragging ? 1.05 : 1,
+        zIndex: isDragging ? 50 : (isSelected ? 10 : 0)
+      }}
+      whileHover={{ scale: isDragging ? 1.05 : 1.02, zIndex: 40 }}
+      onClick={() => !isDragging && setSelectedAppointment(apt)}
       style={{
         top: `${topPx}px`,
         height: `${heightPx}px`,
         left: `calc(${leftPct}% + 4px)`,
-        width: `calc(${colWidth}% - 8px)`
+        width: `calc(${colWidthPct}% - 8px)`,
+        touchAction: 'none'
       }}
-      className={`absolute border-l-4 rounded-md p-2 overflow-hidden shadow-sm cursor-pointer transition-shadow ${style.bg} ${style.border} ${isSelected ? 'ring-2 ring-offset-1 ring-[#1C365C]/20 shadow-md z-10' : 'z-0'}`}
+      className={`absolute border-l-4 rounded-xl p-3 overflow-hidden shadow-sm cursor-grab active:cursor-grabbing transition-shadow ${style.bg} ${style.border} ${isSelected ? 'ring-2 ring-offset-2 ring-[#5A9BD4]/30 shadow-lg' : ''} ${isDragging ? 'shadow-2xl' : ''}`}
     >
-      <span className={`text-[9px] font-bold leading-none block mb-1 ${style.text}`}>
-        {apt.startTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} - {apt.endTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-      </span>
-      <span className="text-[11px] font-bold text-[#1C365C] leading-none block truncate">
+      <div className="flex justify-between items-start mb-1">
+        <span className={`text-[10px] font-black leading-none ${style.text}`}>
+          {apt.startTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+        </span>
+        {isDragging && <div className="w-1.5 h-1.5 rounded-full bg-[#5A9BD4] animate-pulse" />}
+      </div>
+      <span className="text-[12px] font-bold text-[#1C365C] leading-tight block truncate">
         {apt.patientName}
       </span>
-      {heightPx >= 45 && (
-        <span className="text-[9px] text-[#1C365C]/60 leading-none block truncate mt-1">
+      {heightPx >= 50 && (
+        <span className="text-[10px] text-[#1C365C]/50 font-medium leading-none block truncate mt-1">
           {apt.service}
         </span>
       )}

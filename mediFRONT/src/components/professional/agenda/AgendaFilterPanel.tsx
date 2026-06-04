@@ -3,43 +3,68 @@ import { useAgendaStore } from '../../../store/agendaStore';
 import { ChevronLeft, ChevronRight, CheckCircle2, MapPin, ClipboardList } from 'lucide-react';
 
 export const AgendaFilterPanel: React.FC = () => {
-  const { activeFilters, toggleFilter, setPendingDrawerOpen, pendingRequests } = useAgendaStore();
-  
+  const { activeFilters, toggleFilter, setPendingDrawerOpen, pendingRequests, currentDate, nextDate, prevDate, goToToday } = useAgendaStore();
+
   // Mini calendar dummy data
   const days = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'];
-  const dates = Array.from({ length: 31 }, (_, i) => i + 1);
+
+  // Real dates for mini calendar based on currentDate
+  const startOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+  const endOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+  const prevMonthEnd = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0);
+
+  const startDay = startOfMonth.getDay();
+  const monthDays = endOfMonth.getDate();
+
+  const calendarDates = [];
+  // Prev month padding
+  for (let i = startDay - 1; i >= 0; i--) {
+    calendarDates.push({ day: prevMonthEnd.getDate() - i, current: false });
+  }
+  // Current month
+  for (let i = 1; i <= monthDays; i++) {
+    calendarDates.push({ day: i, current: true });
+  }
+  // Next month padding
+  const remaining = 42 - calendarDates.length;
+  for (let i = 1; i <= remaining; i++) {
+    calendarDates.push({ day: i, current: false });
+  }
+
+  const monthLabel = currentDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 
   return (
     <div className="w-[280px] bg-[#FDF9F3] p-6 overflow-y-auto custom-scrollbar flex flex-col gap-8 shrink-0">
-      
+
       {/* Mini Calendar */}
       <div className="bg-white rounded-3xl p-5 shadow-[0_4px_20px_rgba(28,54,92,0.03)] border border-[#1C365C]/5">
         <div className="flex items-center justify-between mb-4 px-1">
-          <h3 className="font-bold text-[#1C365C] text-sm">May 2024</h3>
+          <h3 className="font-bold text-[#1C365C] text-sm">{monthLabel}</h3>
           <div className="flex gap-2 text-[#1C365C]/40">
-            <ChevronLeft className="w-4 h-4 cursor-pointer hover:text-[#1C365C]" />
-            <ChevronRight className="w-4 h-4 cursor-pointer hover:text-[#1C365C]" />
+            <ChevronLeft onClick={prevDate} className="w-4 h-4 cursor-pointer hover:text-[#1C365C] transition-colors" />
+            <ChevronRight onClick={nextDate} className="w-4 h-4 cursor-pointer hover:text-[#1C365C] transition-colors" />
           </div>
         </div>
         <div className="grid grid-cols-7 text-center mb-2">
           {days.map(d => <span key={d} className="text-[9px] font-bold text-[#1C365C]/30">{d}</span>)}
         </div>
-        <div className="grid grid-cols-7 gap-y-2 text-center text-xs font-medium text-[#1C365C]">
-          <span className="text-[#1C365C]/20">28</span>
-          <span className="text-[#1C365C]/20">29</span>
-          <span className="text-[#1C365C]/20">30</span>
-          {dates.map(d => (
-            <div key={d} className="flex justify-center items-center">
-              <span className={`w-6 h-6 flex items-center justify-center rounded-full cursor-pointer transition-colors ${d === 10 ? 'bg-[#1C365C] text-white shadow-md' : 'hover:bg-[#FDF9F3]'}`}>
-                {d}
+        <div className="grid grid-cols-7 gap-y-1 text-center text-xs font-medium text-[#1C365C]">
+          {calendarDates.map((d, i) => (
+            <div key={i} className="flex justify-center items-center py-1">
+              <span className={`w-7 h-7 flex items-center justify-center rounded-full cursor-pointer transition-all ${!d.current ? 'text-[#1C365C]/20' : ''} ${d.current && d.day === currentDate.getDate() ? 'bg-[#5A9BD4] text-white shadow-lg shadow-[#5A9BD4]/30' : 'hover:bg-[#FDF9F3]'}`}>
+                {d.day}
               </span>
             </div>
           ))}
         </div>
-        <button className="w-full mt-4 py-2 bg-[#FDF9F3] text-[#5A9BD4] font-bold text-xs rounded-xl hover:bg-[#5A9BD4]/10 transition-colors">
+        <button 
+          onClick={goToToday}
+          className="w-full mt-4 py-2 bg-[#FDF9F3] text-[#5A9BD4] font-bold text-xs rounded-xl hover:bg-[#5A9BD4]/10 transition-colors"
+        >
           Today
         </button>
       </div>
+
 
       {/* Quick Filters */}
       <div>

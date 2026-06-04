@@ -6,6 +6,7 @@ import { mockDoctors } from '../utils/mockData';
 import { SearchResultCard } from '../components/cards/SearchResultCard';
 import SearchMap from '../components/map/SearchMap';
 import { useLocationStore } from '../store/locationStore';
+import { getUserLocation } from '../services/locationService';
 
 const SearchPage: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -14,14 +15,10 @@ const SearchPage: React.FC = () => {
 
   useEffect(() => {
     // Automatically prompt for location when entering the search page if we don't have it
-    if (!userCoords && navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (pos) => {
-          setUserCoords([pos.coords.latitude, pos.coords.longitude]);
-        },
-        (err) => console.log('Geolocation permission denied or error:', err),
-        { timeout: 5000 }
-      );
+    if (!userCoords) {
+      getUserLocation((coords) => {
+        setUserCoords(coords);
+      });
     }
   }, [userCoords, setUserCoords]);
 

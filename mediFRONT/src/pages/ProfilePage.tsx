@@ -15,7 +15,7 @@ import { ServicesPricingCard } from '../components/profile/ServicesPricingCard';
 import { CareLocationsTabs } from '../components/profile/CareLocationsTabs';
 import { GalleryGrid } from '../components/profile/GalleryGrid';
 import { ReviewsSection } from '../components/profile/ReviewsSection';
-import { DoctorAvailabilityPanel } from '../components/profile/DoctorAvailabilityPanel';
+import { AppointmentBooking } from '../components/profile/AppointmentBooking';
 import { motion } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 
@@ -121,11 +121,12 @@ const ProfilePage: React.FC = () => {
                   <ReviewsSection doctor={doctor} />
                 </motion.div>
               </div>
-              <div className="space-y-8">
+              <div className="lg:col-span-1 self-start">
                 <motion.div variants={itemVariants}>
-                  <DoctorAvailabilityPanel doctor={doctor} />
+                  <AppointmentBooking doctor={doctor} />
                 </motion.div>
               </div>
+
             </div>
           </div>
         ) : (

@@ -74,13 +74,12 @@ export const mockDoctors: Doctor[] = [
     locations: [{ lat: 12.1481, lng: -86.2721, address: 'Los Robles, Managua' }],
     availability: ['Martes', 'Jueves', 'Sábado'],
     availabilityPreview: [
-      { date: 'Mañana', time: '10:00' },
-      { date: 'Jue, 12', time: '15:00' },
-      { date: 'Vie, 13', time: '09:30' }
+      { date: 'Hoy', time: '10:00' },
+      { date: 'Mañana', time: '15:00' }
     ],
     consultationTypes: ['Presencial'],
-    insurance: ['GNP', 'Seguros Monterrey'],
-    titles: ['Médico Cirujano (Anáhuac)', 'Especialidad en Pediatría (Hospital Infantil)'],
+    insurance: ['MAPFRE', 'Seguros América'],
+    titles: ['Médico Cirujano (UAM)', 'Especialidad en Pediatría (HEAL)'],
     experience: '8 años',
     services: ['Control de niño sano', 'Vacunación'],
     licenseNumber: 'CMP-789012',
@@ -110,6 +109,105 @@ export const mockDoctors: Doctor[] = [
       { day: 'Jueves', hours: '10:00 - 16:00' },
       { day: 'Sábado', hours: '09:00 - 13:00' }
     ],
+  },
+  {
+    id: 'd3',
+    name: 'Dr. Roberto Gómez',
+    specialty: 'Dermatología',
+    bio: 'Experto en dermatología clínica y estética.',
+    rating: 4.7,
+    reviewCount: 56,
+    price: 70,
+    photo: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200&h=200',
+    location: { lat: 12.1285, lng: -86.2650, address: 'Altamira, Managua' },
+    locations: [{ lat: 12.1285, lng: -86.2650, address: 'Altamira, Managua' }],
+    availability: ['Lunes', 'Martes', 'Jueves'],
+    availabilityPreview: [
+      { date: 'Hoy', time: '11:00' },
+      { date: 'Mañana', time: '16:30' }
+    ],
+    consultationTypes: ['Presencial', 'En línea'],
+    insurance: ['Assa', 'Palic'],
+    titles: ['Médico Cirujano (UNAN)', 'Especialidad en Dermatología (IMSS)'],
+    experience: '12 años',
+    services: ['Tratamiento de acné', 'Peeling químico'],
+    licenseNumber: 'CMP-345678',
+    diseasesTreated: ['Acné', 'Dermatitis', 'Cáncer de piel'],
+    patientTypes: ['Jóvenes', 'Adultos'],
+    education: ['UNAN Managua - Médico Cirujano', 'Centro Dermatológico Pascua - Especialidad'],
+    certifications: ['Colegio Ibero-Latinoamericano de Dermatología'],
+    languages: ['Español (Nativo)'],
+    publications: [],
+    awards: [],
+    servicesDetails: [
+      { name: 'Consulta Dermatológica', price: 70, duration: '30 min' },
+      { name: 'Limpieza Facial Profunda', price: 50, duration: '60 min' }
+    ],
+    careLocations: [
+      { name: 'Dermaclinic Altamira', address: 'Altamira, de la Vicky 2c al sur', phone: '+505 2270 3333', availability: 'Lun - Jue: 10:00 - 18:00' }
+    ],
+    gallery: [
+      'https://images.unsplash.com/photo-1559839734-2b71f1536783?auto=format&fit=crop&q=80&w=400&h=300'
+    ],
+    reviews: [
+      { patientName: 'Miguel S.', comment: 'Muy profesional, mi acné ha mejorado notablemente.', rating: 5, date: '15 May 2026' }
+    ],
+    appointments: [],
+    schedule: [
+      { day: 'Lunes', hours: '10:00 - 18:00' },
+      { day: 'Martes', hours: '10:00 - 18:00' },
+      { day: 'Jueves', hours: '10:00 - 18:00' }
+    ],
+  },
+  {
+    id: 'd4',
+    name: 'Dra. Elena Valdivia',
+    specialty: 'Ginecología',
+    bio: 'Salud integral para la mujer en todas sus etapas.',
+    rating: 4.9,
+    reviewCount: 210,
+    price: 75,
+    photo: 'https://images.unsplash.com/photo-1559839734-2b71f1536783?auto=format&fit=crop&q=80&w=200&h=200',
+    location: { lat: 12.1120, lng: -86.2210, address: 'Carretera a Masaya, Managua' },
+    locations: [{ lat: 12.1120, lng: -86.2210, address: 'Carretera a Masaya, Managua' }],
+    availability: ['Lunes', 'Miércoles', 'Viernes', 'Sábado'],
+    availabilityPreview: [
+      { date: 'Mañana', time: '08:30' },
+      { date: 'Vie, 13', time: '10:00' }
+    ],
+    consultationTypes: ['Presencial'],
+    insurance: ['Iniser', 'Lafise'],
+    titles: ['Médico Cirujano (UAM)', 'Ginecología y Obstetricia (HSJD)'],
+    experience: '20 años',
+    services: ['Control prenatal', 'Ultrasonido pélvico'],
+    licenseNumber: 'CMP-901234',
+    diseasesTreated: ['SOP', 'Endometriosis', 'Menopausia'],
+    patientTypes: ['Mujeres'],
+    education: ['UAM - Médico Cirujano', 'Hospital Bertha Calderón - Especialidad'],
+    certifications: ['Sociedad Nicaragüense de Ginecología'],
+    languages: ['Español (Nativo)', 'Francés (Básico)'],
+    publications: [],
+    awards: ['Ginecóloga del año 2022'],
+    servicesDetails: [
+      { name: 'Consulta Ginecológica', price: 75, duration: '40 min' },
+      { name: 'Papanicolaou', price: 30, duration: '15 min' }
+    ],
+    careLocations: [
+      { name: 'Centro Médico La Concha', address: 'Km 12.5 Carretera a Masaya', phone: '+505 2233 4455', availability: 'Lun - Sáb: 08:00 - 13:00' }
+    ],
+    gallery: [
+      'https://images.unsplash.com/photo-1579154235884-332005fd80ca?auto=format&fit=crop&q=80&w=400&h=300'
+    ],
+    reviews: [
+      { patientName: 'Elena P.', comment: 'Excelente profesional, muy humana y empática.', rating: 5, date: '10 May 2026' }
+    ],
+    appointments: [],
+    schedule: [
+      { day: 'Lunes', hours: '08:00 - 13:00' },
+      { day: 'Miércoles', hours: '08:00 - 13:00' },
+      { day: 'Viernes', hours: '08:00 - 13:00' },
+      { day: 'Sábado', hours: '08:00 - 12:00' }
+    ],
   }
 ];
 
@@ -128,7 +226,23 @@ export const mockClinics: Clinic[] = [
       { date: 'Mañana', time: '08:00' }
     ],
     consultationTypes: ['Presencial'],
-    doctors: ['d1'],
+    doctors: ['d1', 'd4'],
     services: ['Urgencias', 'Laboratorio', 'Rayos X'],
+  },
+  {
+    id: 'c2',
+    name: 'Centro Pediátrico Los Robles',
+    bio: 'Atención integral para la infancia.',
+    logo: 'https://images.unsplash.com/photo-1502740479091-635887520276?auto=format&fit=crop&q=80&w=200&h=200',
+    rating: 4.9,
+    reviewCount: 156,
+    location: { lat: 12.1481, lng: -86.2721, address: 'Los Robles, Managua' },
+    locations: [{ lat: 12.1481, lng: -86.2721, address: 'Los Robles, Managua' }],
+    availabilityPreview: [
+      { date: 'Mañana', time: '10:00' }
+    ],
+    consultationTypes: ['Presencial'],
+    doctors: ['d2'],
+    services: ['Vacunación', 'Crecimiento y Desarrollo'],
   }
 ];

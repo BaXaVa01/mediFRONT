@@ -8,6 +8,7 @@ import type { Doctor } from '../../types/doctor';
 import { Button } from '../ui/Button';
 import { useLocationStore } from '../../store/locationStore';
 import { useSelectedProfileStore } from '../../store/selectedProfileStore';
+import { getUserLocation } from '../../services/locationService';
 
 // Fix for default marker icon
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
@@ -87,9 +88,8 @@ const SearchMap: React.FC<SearchMapProps> = ({ doctors, targetLocation }) => {
 
   const findMe = () => {
     setIsLocating(true);
-    navigator.geolocation.getCurrentPosition(
-      (pos) => {
-        const coords: [number, number] = [pos.coords.latitude, pos.coords.longitude];
+    getUserLocation(
+      (coords) => {
         setUserCoords(coords);
         leafletMap.current?.flyTo(coords, 15);
         

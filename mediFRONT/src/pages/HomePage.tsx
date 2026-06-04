@@ -6,6 +6,7 @@ import type { Variants } from 'framer-motion';
 import { Button } from '../components/ui/Button';
 import { Input } from '../components/ui/Input';
 import { useLocationStore } from '../store/locationStore';
+import { getUserLocation } from '../services/locationService';
 import homePageOnBackground from '../assets/homepage.png';
 import doctor from '../assets/doctor.png';
 
@@ -16,14 +17,9 @@ const HomePage: React.FC = () => {
   const [location, setLocation] = useState('');
 
   useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (pos) => {
-          setUserCoords([pos.coords.latitude, pos.coords.longitude]);
-        },
-        (err) => console.error('Geolocation error:', err)
-      );
-    }
+    getUserLocation((coords) => {
+      setUserCoords(coords);
+    });
   }, [setUserCoords]);
 
   const handleSearch = (e: React.FormEvent) => {

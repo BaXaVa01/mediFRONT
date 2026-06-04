@@ -53,6 +53,12 @@ export const ProfileHero: React.FC<{ doctor: Doctor }> = ({ doctor }) => {
 
         <div className="flex flex-wrap justify-center md:justify-start gap-4">
           <Button 
+            onClick={() => {
+              const element = document.getElementById('booking-section');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }
+            }}
             className="h-14 px-10 bg-[#5A9BD4] text-white hover:bg-[#4A8BC4] active:scale-95 transition-all text-lg font-bold rounded-2xl shadow-lg shadow-[#5A9BD4]/20 flex items-center gap-3"
           >
             <CalendarDays className="w-5 h-5" />
